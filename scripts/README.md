@@ -342,7 +342,7 @@ This script evaluates and optimizes a DSPy-based definition extraction pipeline 
 ### Arguments
 - --ground-truth-path
   Path to the JSON file containing ground-truth definitions.
-  (default: data/definitions/all_concepts_combined.json)
+  (default: data/defExtra.json)
 - --extractions-dir
   One or more directories containing GROBID-extracted paper data.
   (default: ManualPDFsGROBID/manual_pdfs_grobid, ManualPDFsGROBID/new_grobid)
@@ -442,7 +442,7 @@ This script evaluates definition extraction quality for academic papers using ei
 ### Arguments
 - --ground-truth-path
   Path to JSON file containing ground-truth definitions
-  (default: data/definitions/all_concepts_combined.json)
+  (default: data/defExtra.json)
 - --extractions-dir
   One or more directories containing GROBID XML outputs
   (default: ManualPDFsGROBID/manual_pdfs_grobid, ManualPDFsGROBID/new_grobid)
@@ -485,7 +485,7 @@ This script evaluates definition extraction quality for academic papers using ei
 #### Evaluate a DSPy extractor
 ```python
 uv run evaluate_definitions.py \
-  --ground-truth-path data/definitions/all_concepts_combined.json \
+  --ground-truth-path data/defExtra.json \
   --extractions-dir extraction_dir/pdfs_grobid \
   --llm-model-name openai/gpt-oss-20b \
   --nli-model-name tasksource/ModernBERT-large-nli \
@@ -495,7 +495,7 @@ uv run evaluate_definitions.py \
 #### Evaluation-only (pre-extracted definitions)
 ```python
 uv run evaluate_definitions.py \
-  --ground-truth-path data/definitions/all_concepts_combined.json \
+  --ground-truth-path data/defExtra.json \
   --extractions-dir extraction_dir/pdfs_grobid \
   --extracted-definitions-path outputs/definitions.json
 ```

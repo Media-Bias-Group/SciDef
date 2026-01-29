@@ -75,7 +75,7 @@ def main():
         "--ground-truth-path",
         type=Path,
         help="path containing ground truths",
-        default="data/definitions/all_concepts_combined.json",
+        default="data/defExtra.json",
     )
     parser.add_argument(
         "--extractions-dir",
