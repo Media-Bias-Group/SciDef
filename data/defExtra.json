@@ -1,0 +1,1492 @@
+{
+  "0090023afc66cd2741568599057f4e82b566137c": {
+    "data to algorithm bias": {
+      "definition": "biases in data, which, when used by ML training algorithms, might result in biased algorithmic outcomes",
+      "context": "3.1.1 Data to Algorithm. In this section we talk about biases in data, which, when used by ML training algorithms, might result in biased algorithmic outcomes. (1) Measurement Bias.",
+      "type": "explicit"
+    },
+    "measurement bias/reporting bias": {
+      "definition": "how we choose, utilize, and measure particular features",
+      "context": "Measurement Bias. Measurement, or reporting, bias arises from how we choose, utilize, and measure particular features [144]. An example of this type of bias was observed in the recidivism risk prediction tool COMPAS, where prior arrests and friend/family arrests were used as proxy variables to measure level of \"riskiness\" or \"crime\"--which on its own can be viewed as mismeasured proxies.",
+      "type": "explicit"
+    },
+    "omitted variable bias": {
+      "definition": "one or more important variables are left out of the model",
+      "context": "Omitted Variable Bias. Omitted variable bias4 occurs when one or more important variables are left out of the model [38, 114, 131]. An example for this case would be when someone designs a model to predict, with relatively high accuracy, the annual percentage rate at which customers will stop subscribing to a service, but soon observes that the majority of users are canceling their subscription without receiving any warning from the designed model.",
+      "type": "explicit"
+    },
+    "representation bias": {
+      "definition": "how we sample from a population during data collection process",
+      "context": "Representation Bias. Representation bias arises from how we sample from a population during data collection process [144]. Non-representative samples lack the diversity of the population, with missing subgroups and other anomalies.",
+      "type": "explicit"
+    },
+    "aggregation bias": {
+      "definition": "false conclusions are drawn about individuals from observing the entire population.",
+      "context": "Aggregation Bias. Aggregation bias (or ecological fallacy) arises when false conclusions are drawn about individuals from observing the entire population. An example of this type of bias can be seen in clinical aid tools.",
+      "type": "explicit"
+    },
+    "simpson's paradox": {
+      "definition": "a type of aggregation bias that arises in the analysis of heterogeneous data. The paradox arises when an association observed in aggregated data disappears or reverses when the same data is disaggregated into its underlying subgroups.",
+      "context": "Simpson's Paradox. Simpson's paradox is a type of aggregation bias that arises in the analysis of heterogeneous data [18]. The paradox arises when an association observed in aggregated data disappears or reverses when the same data is disaggregated into its underlying subgroups (Fig. 2(a)). One of the better-known examples of the type of paradox arose during the gender bias lawsuit in university admissions against UC Berkeley [16].",
+      "type": "explicit"
+    },
+    "modifiable areal unit problem": {
+      "definition": "a statistical bias in geospatial analysis, which arises when modeling data at different levels of spatial aggregation",
+      "context": "Modifiable Areal Unit Problem is a statistical bias in geospatial analysis, which arises when modeling data at different levels of spatial aggregation [56]. This bias results in different trends learned when data is aggregated at different spatial scales.",
+      "type": "explicit"
+    },
+    "sampling bias": {
+      "definition": "nonrandom sampling of subgroups.",
+      "context": "Sampling Bias. Sampling bias is similar to representation bias, and it arises due to nonrandom sampling of subgroups. As a consequence of sampling bias, the trends estimated for one population may not generalize to data collected from a new population",
+      "type": "explicit"
+    },
+    "linking bias": {
+      "definition": "network attributes obtained from user connections, activities, or interactions differ and misrepresent the true behavior of the users",
+      "context": "Linking Bias. Linking bias arises when network attributes obtained from user connections, activities, or interactions differ and misrepresent the true behavior of the users [120]. In [104] authors show how social networks can be biased toward low-degree nodes when only considering the links in the network and not considering the content and behavior of users in the network.",
+      "type": "explicit"
+    },
+    "algorithm to user bias": {
+      "definition": "a result of algorithmic outcomes and affect user behavior as a consequence.",
+      "context": "Any biases in algorithms might introduce biases in user behavior. In this section we talk about biases that are as a result of algorithmic outcomes and affect user behavior as a consequence. (1) Algorithmic Bias.",
+      "type": "explicit"
+    },
+    "algorithmic bias": {
+      "definition": "when the bias is not present in the input data and is added purely by the algorithm.",
+      "context": "Algorithmic Bias. Algorithmic bias is when the bias is not present in the input data and is added purely by the algorithm [9]. The algorithmic design choices, such as use of certain optimization functions, regularizations, choices in applying regression models on the data as a whole or considering subgroups, and the general use of statistically biased estimators in algorithms [44], can all contribute to biased algorithmic decisions that can bias the outcome of the algorithms.",
+      "type": "explicit"
+    },
+    "user interaction bias": {
+      "definition": "a type of bias that can not only be observant on the Web but also get triggered from two sources-the user interface and through the user itself by imposing his/her self-selected biased behavior and interaction.",
+      "context": "User Interaction Bias. User Interaction bias is a type of bias that can not only be observant on the Web but also get triggered from two sources-the user interface and through the user itself by imposing his/her self-selected biased behavior and interaction [9]. This type of bias can be influenced by other types and subtypes, such as presentation and ranking biases.",
+      "type": "explicit"
+    },
+    "ranking bias": {
+      "definition": "The idea that top-ranked results are the most relevant and important will result in attraction of more clicks than others.",
+      "context": "Ranking Bias. The idea that top-ranked results are the most relevant and important will result in attraction of more clicks than others. This bias affects search engines [9] and crowdsourcing applications [93].",
+      "type": "explicit"
+    },
+    "popularity bias": {
+      "definition": "Items that are more popular tend to be exposed more.",
+      "context": "Popularity Bias. Items that are more popular tend to be exposed more. However, popularity metrics are subject to manipulation-for example, by fake reviews or social bots [117]. As an instance, this type of bias can be seen in search engines [71, 117] or recommendation systems where popular objects would be presented more to the public. But this presentation may not be a result of good quality; instead, it may be due to other biased factors.",
+      "type": "explicit"
+    },
+    "emergent bias": {
+      "definition": "a result of change in population, cultural values, or societal knowledge usually some time after the completion of design",
+      "context": "Emergent Bias. Emergent bias occurs as a result of use and interaction with real users. This bias arises as a result of change in population, cultural values, or societal knowledge usually some time after the completion of design [53]. This type of bias is more likely to be observed in user interfaces, since interfaces tend to reflect the capacities, characteristics, and habits of prospective users by design [53].",
+      "type": "explicit"
+    },
+    "user to data bias": {
+      "definition": "Any inherent biases in users might be reflected in the data they generate.",
+      "context": "Many data sources used for training ML models are user-generated. Any inherent biases in users might be reflected in the data they generate. Furthermore, when user behavior is affected/modulated by an algorithm, any biases present in those algorithm might introduce bias in the data generation process.",
+      "type": "explicit"
+    },
+    "historical bias": {
+      "definition": "the already existing bias and socio-technical issues in the world.",
+      "context": "Historical Bias. Historical bias is the already existing bias and socio-technical issues in the world and can seep into from the data generation process even given a perfect sampling and feature selection [144]. An example of this type of bias can be found in a 2018 image search result where searching for women CEOs ultimately resulted in fewer female CEO images due to the fact that only 5% of Fortune 500 CEOs were woman-which would cause the search results to be biased towards male CEOs [144]",
+      "type": "explicit"
+    },
+    "population bias": {
+      "definition": "when statistics, demographics, representatives, and user characteristics are different in the user population of the platform from the original target population",
+      "context": "Population Bias. Population bias arises when statistics, demographics, representatives, and user characteristics are different in the user population of the platform from the original target population [120]. Population bias creates non-representative data.",
+      "type": "explicit"
+    },
+    "self-selection bias": {
+      "definition": "a subtype of the selection or sampling bias in which subjects of the research select themselves.",
+      "context": "Self-Selection Bias. Self-selection bias4 is a subtype of the selection or sampling bias in which subjects of the research select themselves. An example of this type of bias can be observed in an opinion poll to measure enthusiasm for a political candidate, where the most enthusiastic supporters are more likely to complete the poll.",
+      "type": "explicit"
+    },
+    "behavioral bias": {
+      "definition": "different user behavior across platforms, contexts, or different datasets.",
+      "context": "Behavioral Bias. Behavioral bias arises from different user behavior across platforms, contexts, or different datasets [120]. An example of this type of bias can be observed in [108], where authors show how differences in emoji representations among platforms can result in different reactions and behavior from people and sometimes even leading to communication errors.",
+      "type": "explicit"
+    },
+    "temporal bias": {
+      "definition": "differences in populations and behaviors over time.",
+      "context": "Temporal Bias. Temporal bias arises from differences in populations and behaviors over time [120]. An example can be observed in Twitter where people talking about a particular topic start using a hashtag at some point to capture attention, then continue the discussion about the event without using the hashtag [120, 146].",
+      "type": "explicit"
+    },
+    "content production bias": {
+      "definition": "structural, lexical, semantic, and syntactic differences in the contents generated by users.",
+      "context": "Content Production Bias. Content Production bias arises from structural, lexical, semantic, and syntactic differences in the contents generated by users [120]. An example of this type of bias can be seen in [118] where the differences in use of language across different gender and age groups is discussed.",
+      "type": "explicit"
+    },
+    "discrimination": {
+      "definition": "human prejudice and stereotyping based on the sensitive attributes",
+      "context": "Similar to bias, discrimination is also a source of unfairness. Discrimination can be considered as a source for unfairness that is due to human prejudice and stereotyping based on the sensitive attributes, which may happen intentionally or unintentionally, while bias can be considered as a source for unfairness that is due to the data collection, sampling, and measurement. Although bias can also be seen as a source of unfairness that is due to human prejudice and stereotyping, in the algorithmic fairness literature it is more intuitive to categorize them as such according to the existing research in these areas.",
+      "type": "explicit"
+    }
+  },
+  "016f7a076ac272db106fbcea056752c7307f676a": {
+    "selection bias": {
+      "definition": "the nonrandom selection of defendants into the system",
+      "context": "We return to these arguments below, but for now, it is important to clarify that the NDT refers specifically to the insignificant direct effects of race on sentencing. Conducted mainly in the late 1970s and 1980s, wave 3 of research witnessed yet another round of methodological refinements, including corrections for \"selection bias\" (the nonrandom selection of defendants into the system) and \"specification error\" (the omission of explanatory variables; see Zatz 1987, p. 75). Researchers also investigated historical changes in sentencing practices and expanded the focus to types of crime not previously emphasized (e.g., drug processing).",
+      "type": "explicit"
+    },
+    "specification error": {
+      "type": "explicit",
+      "definition": "the omission of explanatory variable",
+      "context": "Conducted mainly in the late 1970s and 1980s, wave 3 of researchwitnessed yet another round of methodological refinements, includingcorrections for \"selection bias\" (the nonrandom selection of defendants into the system) and \"specification error\" (the omission of explanatory variables; see Zatz 1987, p. 75). Researchers also investigatedhistorical changes in sentencing practices and expanded the focus totypes of crime not previously emphasized (e.g., drug processing)"
+    }
+  },
+  "0209e602acaeab882fee84e244caf574cf345ef9": {
+    "ratio bias/numerosity bias": {
+      "definition": "the finding that people who understand that probability is a function of frequencies in both the numerator and the denominator still tend to pay less attention to the denominator as a default.",
+      "context": "A core prediction of S. Epstein et al.'s (1996) theory, therefore, is that a predominance of intuitive over analytical thinking, as measured by the REI, will account for an effect that is sometimes called ratio bias (the same effect is called the numerosity bias in the probability judgment literature; for a review, see Reyna & Brainerd, 1994). The ratio (or numerosity) bias is the finding that people who understand that probability is a function of frequencies in both the numerator and the denominator still tend to pay less attention to the denominator as a default. In the classic ratio bias task derived from Piaget and Inhelder (1951/1975), participants are offered a prize if they draw a colored jelly bean from a bowl.",
+      "type": "explicit"
+    }
+  },
+  "033b21cf1c6d3bdae587e673452b994443bf3546": {
+    "narrative": {
+      "definition": "The representation of an event or a series of events.",
+      "context": "he bare minimum Simply put, narrative isthe representation of an event or a series of events. \"Event\" is the key word here, though some people prefer the word \"action.\"",
+      "type": "explicit"
+    }
+  },
+  "03c4bb2121b3dd2b5302d37c81e84092a501bc91": {
+    "platformed racism": {
+      "definition": "a new form of racism derived from the culture of social media platforms--their design, technical affordances, business models and policies-- and the specific cultures of use associated with them.",
+      "context": "This article proposes the concept 'platformed racism' as a new form of racism derived from the culture of social media platforms--their design, technical affordances, business models and policies-- and the specific cultures of use associated with them. Platformed racism has dual meanings: first, it evokes platforms as amplifiers and manufacturers of racist discourse and second, it describes the modes of platform governance that reproduce (but that can also address) social inequalities",
+      "type": "explicit"
+    }
+  },
+  "044031c8bf57c9155572d26b0627af5ca80677f6": {
+    "gatekeeper": {
+      "definition": "a main task of journalists, indicates their claim to be the ones who decide what the public needs to know, as well as when and how such information should be provided.",
+      "context": "Traditionally, journalism has been attached to the institution of the media, based on the production of news by dedicated paid labour, the journalists. The term 'gatekeeper', used to describe a main task of journalists, indicates their claim to be the ones who decide what the public needs to know, as well as when and how such information should be provided. The gatekeeper role is maintained and enforced by professional routines and conventions that are said to guarantee the quality and neutrality of institutional journalism (Shoemaker 1991; Reese and Ballinger 2001).",
+      "type": "explicit"
+    }
+  },
+  "057bd5a3a6b652dfd1419128aae578478f5891b0": {
+    "stigma": {
+      "definition": "the mark, the condition, or status that is subject to devaluation",
+      "context": "Rather, we aim to better understand stigma research by clarifying what kinds of stigmas, what kinds of individuals, and what kinds of consequences have been studied. Stigma, proper, is the mark, the condition, or status that is subject to devaluation (Goffman 1963, Hinshaw 2006, Sartorius 2007). Stigmatization is the social process by which the mark affects the lives of all those touched by it.",
+      "type": "explicit"
+    },
+    "stigmatization": {
+      "definition": "A social process embedded in social relationships that devalues through conferring labels and stereotyping",
+      "context": "Table 1 Theoretical building blocks of stigma research Basic concepts Stigma A deeply discrediting attribute; \"mark of shame\"; \"mark of oppression\"; devalued social identity Stigmatization A social process embedded in social relationships that devalues through conferring labels and stereotyping Labels Officially sanctioned terms applied to conditions, individual, groups, places, organizations, institutions, or other social entities",
+      "type": "explicit"
+    },
+    "stereotypes": {
+      "definition": "Negative beliefs and attitudes assigned to labeled social entities",
+      "context": "Labels Officially sanctioned terms applied to conditions, individual, groups, places, organizations, institutions, or other social entities Stereotypes Negative beliefs and attitudes assigned to labeled social entities Prejudice Endorsement of negative beliefs and attitudes in stereotypes",
+      "type": "explicit"
+    },
+    "labels": {
+      "definition": "Officially sanctioned terms applied to conditions, individual, groups, places, organizations, institutions, or other social entities.",
+      "context": "Stigmatization A social process embedded in social relationships that devalues through conferring labels and stereotyping Labels Officially sanctioned terms applied to conditions, individual, groups, places, organizations, institutions, or other social entities Stereotypes Negative beliefs and attitudes assigned to labeled social entities Prejudice Endorsement of negative beliefs and attitudes in stereotypes",
+      "type": "explicit"
+    },
+    "prejudice": {
+      "definition": "Endorsement of negative beliefs and attitudes in stereotypes",
+      "context": "Stereotypes Negative beliefs and attitudes assigned to labeled social entities Prejudice Endorsement of negative beliefs and attitudes in stereotypes Discrimination Behaviors that act to endorse and reinforce stereotypes, and disadvantage those labeled",
+      "type": "explicit"
+    },
+    "discrimination": {
+      "definition": "Behaviors that act to endorse and reinforce stereotypes, and disadvantage those labeled.",
+      "context": "Prejudice Endorsement of negative beliefs and attitudes in stereotypes Discrimination Behaviors that act to endorse and reinforce stereotypes, and disadvantage those labeled Stigma characteristics Physical Of the body, e.g., physical disabilities",
+      "type": "explicit"
+    },
+    "self-stigma": {
+      "definition": "Internalized acceptance of stereotypes and prejudice",
+      "context": "Action-oriented Self-stigma Internalized acceptance of stereotypes and prejudice Courtesy stigma Stereotypes, prejudice, and discrimination by association with marked groups",
+      "type": "explicit"
+    },
+    "courtesy stigma": {
+      "definition": "Stereotypes, prejudice, and discrimination by association with marked groups",
+      "context": "Self-stigma Internalized acceptance of stereotypes and prejudice Courtesy stigma Stereotypes, prejudice, and discrimination by association with marked groups Public stigma Stereotypes, prejudice, and discrimination endorsed by the general population",
+      "type": "explicit"
+    },
+    "public stigma": {
+      "definition": "Stereotypes, prejudice, and discrimination endorsed by the general population.",
+      "context": "Courtesy stigma Stereotypes, prejudice, and discrimination by association with marked groups Public stigma Stereotypes, prejudice, and discrimination endorsed by the general population Provider-based stigma Prejudice and discrimination voiced or exercised, consciously or unconsciously, by occupational groups designated to provide assistance to stigmatized groups",
+      "type": "explicit"
+    },
+    "provider-based stigma": {
+      "definition": "Prejudice and discrimination voiced or exercised, consciously or unconsciously, by occupational groups designated to provide assistance to stigmatized groups.",
+      "context": "Public stigma Stereotypes, prejudice, and discrimination endorsed by the general population Provider-based stigma Prejudice and discrimination voiced or exercised, consciously or unconsciously, by occupational groups designated to provide assistance to stigmatized groups Structural stigma Prejudice and discrimination by policies, laws, and constitutional practice; also called institutionalized stigma",
+      "type": "explicit"
+    },
+    "structural stigma": {
+      "definition": "Prejudice and discrimination by policies, laws, and constitutional practice; also called institutionalized stigma.",
+      "context": "Provider-based stigma Prejudice and discrimination voiced or exercised, consciously or unconsciously, by occupational groups designated to provide assistance to stigmatized groups Structural stigma Prejudice and discrimination by policies, laws, and constitutional practice; also called institutionalized stigma",
+      "type": "explicit"
+    }
+  },
+  "05b3fc81364c2ad10c3b58b3cefcf191f6feb120": {
+    "framing": {
+      "definition": "a rhetorical device through which actors create specific meaning in line with political interests.",
+      "context": "Framing can also function as a rhetorical device through which actors create specific meaning in line with political interests (Fiss and Hirsch 2005, Suddaby and Greenwood 2005). For example, social movement theorists have argued how leaders attract adherents through frames that diagnose problems and assign blame, prognostic frames that lay out remedial actions, and motivational frames that provide rationales for action (Benford and Snow 2000).",
+      "type": "explicit"
+    }
+  },
+  "05bfced33d92944b7a0672490c371342d28ee076": {
+    "observational bias": {
+      "definition": "Observed data differs systematically from the unobserved data",
+      "context": "One is inefficiency caused by throwing away information relevant to the statistical inferences being made. Furthermore, inferences from listwise-deletion estimation can be biased if the observed data differs systematically from the unobserved data. In our case inefficiency was clearly a problem.",
+      "type": "explicit"
+    }
+  },
+  "09116cf5a3160f310b7c82ec1dc8b86e3850829c": {
+    "ideology": {
+      "definition": "an interest-linked perspective",
+      "context": "These often relate to different political positions and can be seen as ideological if they relate to the legitimation of ways of understanding that are connected to social interests. In this way, ideology (meaning an interest-linked perspective) and the struggle for legitimacy by groups go hand in hand. Our method begins by setting out the range of available arguments in public discourse on a specific subject.",
+      "type": "explicit"
+    }
+  },
+  "09c660d438e8b372f3e77504c069255b85c00256": {
+    "psychological distance": {
+      "definition": "a subjective experience that something is close or far away from the self, here, and now.",
+      "context": "They serve to transcend the immediate situation and represent psychologically distant objects. Psychological distance is a subjective experience that something is close or far away from the self, here, and now. Psychological distance is thus egocentric: Its reference point is the self, here and now, and the different ways in which an object might be removed from that point-in time, space, social distance, and hypotheticality-constitute different distance dimensions.",
+      "type": "explicit"
+    },
+    "high-level construal": {
+      "definition": "relatively abstract, coherent, and superordinate mental representations, compared with low-level construals.",
+      "context": "On the basis of theories of categorization (Rosch, 1975), concept formation (Medin & Smith, 1984), and action identification (Vallacher & Wegner, 1987), we view high-level construals as relatively abstract, coherent, and superordinate mental representations, compared with low-level construals. Moving from a concrete representation of an object to a more abstract representation involves retaining central features and omitting features that by the very act of abstraction are deemed incidental.",
+      "type": "explicit"
+    },
+    "correspondence bias": {
+      "definition": "a tendency toward a high-level construal of behavior in terms of abstract, decontextualized dispositions",
+      "context": "A large body of person-perception research has shown that people are biased toward attributing others' behavior to the corresponding personal dispositions, even when the behavior is situationally constrained (see Gilbert & Malone, 1995; E. E. Jones, 1979). In terms of CLT, this bias, called the correspondence bias, reflects a tendency toward a high-level construal of behavior in terms of abstract, decontextualized dispositions (see Fiedler et al., 1995; Semin & Fiedler, 1988; Semin & Smith, 1999). Distance should therefore enhance the correspondence bias.",
+      "type": "explicit"
+    },
+    "centrality": {
+      "definition": "Changing a high-level feature has a greaterimpact on the meaning of an object than does changing a low-level feature",
+      "type": "explicit",
+      "context": "The first criterion reflects centrality: Changing a high-level feature has a greater impact on the meaning of an object than does changing a low-level feature. For example, a lecture would change more when the speaker is changed than when the room is changed, suggesting that the speaker is a higher level feature of the lecture than the room is."
+    },
+    "subordination": {
+      "definition": "The meaning of low-level features depends on highlevel features more than vice versa",
+      "type": "explicit",
+      "context": ". The second criterion reflects subordination: The meaning of low-level features depends on highlevel features more than vice versa. For example, when learning about a forthcoming guest lecture, location would become important only if the topic is interesting. T"
+    }
+  },
+  "0d23df558a30492946059c017343a431dc3dc172": {
+    "inter-media agenda-setting": {
+      "definition": "a widely-used theory to explain how content transfers between news medi",
+      "context": "Inter-media agenda-setting",
+      "type": "explicit"
+    }
+  },
+  "0f7eda998bbce003745ff2fdbcaa1d9a8119368b": {
+    "epistemic bubble": {
+      "definition": "a social epistemic structure in which some relevant voices have been excluded through omission.",
+      "context": "However, the modern conversation often fails to distinguish between them. Loosely, an epistemic bubble is a social epistemic structure in which some relevant voices have been excluded through omission. Epistemic bubbles can form with no ill intent, through ordinary processes of social selection and community formation.",
+      "type": "explicit"
+    },
+    "echo chamber": {
+      "definition": "a social epistemic structure in which other relevant voices have been actively discredited.",
+      "context": "But when we also use those same social networks as sources of news, then we impose on ourselves a narrowed and selfreinforcing epistemic filter, which leaves out contrary views and illegitimately inflates our epistemic self-confidence. An echo chamber, on the other hand, is a social epistemic structure in which other relevant voices have been actively discredited. My analysis builds on Kathleen Hall Jamieson and Frank Capella's work, with some philosophical augmentation.",
+      "type": "explicit"
+    },
+    "belief polarization": {
+      "definition": "the tendency of individuals, once they believe that p, to increase their belief that p.",
+      "context": "Here is one possible escape route. Consider Thomas Kelly's discussion of belief polarization. Belief polarization is the tendency of individuals, once they believe that p, to increase their belief that p. Kelly argues that belief polarization works by the mechanism that, once an agent has acquired a belief, they tend to subject counter-arguments to greater scrutiny and give supporting arguments a relative pass.",
+      "type": "explicit"
+    },
+    "orwellian double speak": {
+      "definition": "deliberately ambiguous, euphemism-filled language, designed to hide the intent of the speaker.",
+      "context": "This phenomenon stands in stark contrast to accounts of obfuscatory speech. Take, for instance, Orwellian double speak - deliberately ambiguous, euphemism-filled language, designed to hide the intent of the speaker (Orwell 1968). Double speak is a practice that evinces no interest in coherence, clarity, or truth.",
+      "type": "explicit"
+    }
+  },
+  "14bf8b0a9961f5c95b62861c9b7f3d5fcf778dcf": {
+    "recall error": {
+      "definition": "the longer since an event, the less accurately we remember it",
+      "context": "In general terms, the longer since an event, the less accurately we remember it. However, recall reliability is not simply a function of elapsed time: type of event also affects recall.",
+      "type": "explicit"
+    }
+  },
+  "1538c4777271ae6abb542801dac01423f4d566ad": {
+    "publication bias": {
+      "definition": "Significant results are more likely to be published while non-significant results tend to be relegated to file drawers.",
+      "context": "Publication Bias Publication bias [Begg and Berlin, 1988], also known as the file-drawer problem [Rosenthal, 1979; Iyengar and Greenhouse, 1988], refers to the observation that significant results are more likely to be published while non-significant results tend to be relegated to file drawers. Thus, the meta-analysis result will focus on an unrepresentative proportion of a total research population.",
+      "type": "explicit"
+    }
+  },
+  "17734113f254a64b3bae312713edba3b1e34fb56": {
+    "fake news": {
+      "definition": "fictitious news style content that is fabricated to deceive the public.",
+      "context": "In recent years, fake news has become an issue that is a threat to public discourse, human society, and democracy (Borges et al., 2018; Qayyum et al., 2019). Fake news refers to fictitious news style content that is fabricated to deceive the public (Aldwairi & Alwahedi, 2018; Jang & Kim, 2018). False information spreads quickly through social media, where it can impact millions of users (Figueira & Oliveira, 2017).",
+      "type": "explicit"
+    },
+    "Post-truth Era": {
+      "type": "explicit",
+      "definition": "digital disinformation and informationwarfare led by malevolent actors running false information campaigns to manipulate public opinion",
+      "context": "Indeed, today we live in what some have called a “post-truth” era, which is characterized by digital disinformation and information warfare led by malevolent actors running false information campaigns to manipulate public opinion (Anderson, 2018; Qayyum et al., 2019; Zannettou et al., 2019)"
+    },
+    "Deepfakes": {
+      "type": "explicit",
+      "definition": "hyper-realistic videos using face swaps that leave little trace of manipulation",
+      "context": "Recent technological advancements have made it easy to create what are now called “deepfakes”, hyper-realistic videos using face swaps that leave little trace of manipulation (Chawla, 2019). Deepfakes are the productof artificial intelligence (AI) applications that merge, combine, replace, and superimpose images and videoclips to create fake videos that appear authentic (Maras & Alexandrou, 2018)."
+    }
+  },
+  "1acbc58041a408e33ba33e2f0af5808f2bc56ff1": {
+    "climatic sampling bias": {
+      "definition": "a bias that occurs when trials are performed under unrepresentative seasonal climate conditions",
+      "context": "We examined four ways in which climatic analysis afforded by tricot trials can improve variety recommendations. First, a potential improvement is that climatic analysis corrects the climatic sampling bias, a bias that occurs when trials are performed under unrepresentative seasonal climate conditions, thereby degrading variety recommendations. To assess the importance of climatic sampling bias, we followed the cross-validation procedure used to generate the generalizable models but did not use the seasonal climate data for predictions.",
+      "type": "explicit"
+    }
+  },
+  "1ccc69b50a7495af1547833415f89536619c93e9": {
+    "reverse agenda-setting": {
+      "definition": "journalists may be responding to actual or perceived public interests and thus the public agenda could be seen as preceding and influencing the media agenda",
+      "context": "Under what conditions do digitally connected publics respond and when do those responses meaningfully impact the broader public and media agendas and the framing of public issues? Before the reintroduction of the term by Kim and Lee (2006), the notion of reverse agenda-setting meant simply that journalists may be responding to actual or perceived public interests and thus the public agenda could be seen as preceding and influencing the media agenda (McCombs, 2004). Influences on the formation of the media agenda are outlined by Shoemaker and Reese's (2014) five-tier conceptual model.",
+      "type": "explicit"
+    },
+    "intermedia agenda building": {
+      "definition": "the effects of institutional media agendas on each other",
+      "context": "Although this model acknowledges the possibility that individuals, such as government officials or public relations practitioners, may affect the media agenda and that the cultural factors may simultaneously influence both journalists and their audiences, the general public is not identified as a significant influence in the model and the notion of reverse agenda-setting is not raised. Another related literature focuses on the concept of intermedia agenda building, which refers to the effects of institutional media agendas on each other (Golan, 2006). A number of studies attribute intermedia communication processes to common interests and sources among journalists (e.g., pack journalism) as well as news organizations' willingness to \"report on a report\" (Denham, 2010, p. 315).",
+      "type": "explicit"
+    }
+  },
+  "22170e94588cf3b970ff8855c946a130aaa065c2": {
+    "self-serving bias": {
+      "definition": "to conflate what is fair with what benefits oneself.",
+      "context": "This paper identifies a different and relatively simple psychological mechanism as a major cause of bargaining impasse. This is the tendency for parties to arrive at judgments that reflect a self-serving bias-to conflate what is fair with what benefits oneself. Such self-serving assessments of fairness can impede negotiations and promote impasse in at least three ways.",
+      "type": "explicit"
+    }
+  },
+  "22cb049f711570de72ea60a5f6b49fdf4459d589": {
+    "agenda-setting": {
+      "definition": "the process of identifying and advocating issues for inclusion on public and governmental agendas.",
+      "context": "This means that they are often engaged in framing contests with other actors in society as they seek to raise issues to the social agenda and to suggest ways of thinking about these issues. Graber {#xxx 1993} distinguishes between \"agenda-setting,\" which is the process of identifying and advocating issues for inclusion on public and governmental agendas, and \"agenda-building,\" or efforts to influence the context in which social problems are considered. When social movement actors gather in the streets and in other public spaces to demonstrate for their respective causes, they seek to set agendas by bringing new or greater attention to a particular problem.",
+      "type": "explicit"
+    },
+    "agenda-building": {
+      "type": "explicit",
+      "definition": "efforts to influence the context in which social problems are considered",
+      "context": "Graber {#xxx 1993} distinguishes between \"agenda-setting,\" which is the process of identifying and advocating issues for inclusion on public and governmental agendas, and \"agenda-building,\" or efforts to influence the context in which social problems are considered. When social movement actors gather in the streets and in other public spaces to demonstrate for their respective causes, they seek to set agendas by bringing new or greater attention to a particular problem"
+    },
+    "Selection Bias": {
+      "type": "explicit",
+      "definition": "agenda-setting, and it results from media gatekeepers' choices of a very small number of protest events from a large pool of possible events on which to report.",
+      "context": "In an earlier article {McCarthy, 1996 #xxx}, we identified two distinct forms of bias in the media's recording of protest events as selection bias and description bias. Selection bias involves agenda-setting, and it results from media gatekeepers' choices of a very small number of protest events from a large pool of possible events on which to report. Description bias reflects agenda-building processes, and it introduces another distinct way in which media personnel shape the political messages conveyed in their news reports by making choices about how a protest event is portrayed in a media story."
+    },
+    "Description Bias": {
+      "type": "explicit",
+      "definition": "agenda-building processes, and it introduces another distinct way in which media personnel shape the political messages conveyed in their news reports by making choices about how a protest eventis portrayed in a media story",
+      "context": "In an earlier article {McCarthy, 1996 #xxx}, we identified two distinct forms of bias in the media's recording of protest events as selection bias and description bias. Selection bias involves agenda-setting, and it results from media gatekeepers' choices of a very small number of protest events from a large pool of possible events on which to report. Description bias reflects agenda-building processes, and it introduces another distinct way in which media personnel shape the political messages conveyed in their news reports by making choices about how a protest event is portrayed in a media story."
+    }
+  },
+  "235c4f33d5bfc81bfa09a2458fcc0e42ef4454dc": {
+    "propaganda": {
+      "definition": "an expression of opinion or action by individuals or groups deliberately designed to influence the opinions and actions of other individuals or groups with reference to a predetermined end.",
+      "context": "It published workbooks and held seminars in the early 1930s aimed at promoting the ideal of \"self-determination,\" regarding propaganda as contrary to this end. They offer the following definition: \"Propaganda is an expression of opinion or action by individuals or groups deliberately designed to influence the opinions and actions of other individuals or groups with reference to a predetermined end.\"4 While this definition adds some details to the previous one, it does not add any restrictions.",
+      "type": "explicit"
+    }
+  },
+  "23eb7b57f821ec3b579605540b494d7c079a8467": {
+    "benevolent sexism": {
+      "definition": "a subjectively positive orientation of protection, idealization, and affection directed toward women that, like HS, serves to justify women's subordinate status to men",
+      "context": "The idea that \"prejudice is an antipathy\" (Allport, 1954, p. 9) is the bedrock on which virtually all prejudice theories are built. This assumption has blinded social psychologists to the true nature of sexism (and perhaps other prejudices as well; see Fiske, Xu, Cuddy, & Glick, 1999; Glick & Fiske, in press; Jackman, 1994), which encompasses not just hostile sexism (HS) but also benevolent sexism (BS), a subjectively positive orientation of protection, idealization, and affection directed toward women that, like HS, serves to justify women's subordinate status to men (Glick & Fiske, 1996). Whereas HS is likely to elicit women's outrage, BS may often obtain their acquiescence, as it works effectively and invisibly to promote gender inequality.",
+      "type": "explicit"
+    }
+  },
+  "24589ef86242ff182e7bae495b94e7c11931f20c": {
+    "anxious semiotics": {
+      "definition": "Sense of uncertainty and concern over potential human culpability in loss.",
+      "context": "There is nothing inherently new about the experience of anxiety in relation to environmental conditions, but the Anthropocene brings with it particular configurations that underpin many experiences of listening to birds. I use the term anxious semiotics to convey this sense of uncertainty and concern over potential human culpability in loss. Listening to birds in the Anthropocene is not simply a process of grieving for what is lost, although as van Dooren has argued, grief and loss are profound elements of modern relations with birds on \"the dull edge of extinction.\"",
+      "type": "explicit"
+    }
+  },
+  "261a5f3b2fe61904107a2e80d4a9426532cd4b06": {
+    "frames": {
+      "definition": "schemata of interpretation that provides a context for understanding information and enables individuals to locate, perceive, identify and label",
+      "context": "Several articles have examined the rhetorical construction of refugees and the general prescriptions for migrant social roles in international news coverage (e.g. Gale 2004; Hardy 1994; Phillips and Hardy 1997; Pickering 2001; Robins 2003; Thweatt 2005); however, these articles have largely failed to examine how refugees are rhetorically constructed through specific media frames (for exceptions, see d'Haenens and de Lange 2001; Robins 2003). Frames are 'schemata of interpretation that provides a context for understanding information and enables individuals to locate, perceive, identify and label' (Goffman 1974: 21). Media frames, specifically, then are the particular ways in which journalists compose news stories to optimize the accessibility and impact of a story on a particular audience (Valkenburg et al. 1999).",
+      "type": "explicit"
+    },
+    "media frames": {
+      "definition": "the particular ways in which journalists compose news stories to optimize the accessibility and impact of a story on a particular audience",
+      "context": "Frames are 'schemata of interpretation that provides a context for understanding information and enables individuals to locate, perceive, identify and label' (Goffman 1974: 21). Media frames, specifically, then are the particular ways in which journalists compose news stories to optimize the accessibility and impact of a story on a particular audience (Valkenburg et al. 1999). Research into media frames has demonstrated that news coverage relies on a variety of specific frames to communicate the news to audiences and that different frames can influence readers' or viewers' perceptions of public issues (for reviews see McCombs and Ghanem 2001; McCombs et al. 1997; Scheufele 1999).",
+      "type": "explicit"
+    }
+  },
+  "262153e94c3632ccf213dac45a93d8ff3cc3ff98": {
+    "styles": {
+      "definition": "Repeated sets of stancetaking moves can emerge as relatively stabilized repertoires",
+      "context": "Stance and style Repeated sets of stancetaking moves can emerge as relatively stabilized repertoires, sometimes called \"styles,\" associated with or situations or social identities (Bauman 2004). Styles are (at least to some extent) repeatable.",
+      "type": "explicit"
+    },
+    "registers": {
+      "definition": "Styles associated with a particular set of contextual factors that confront a speaker with a particular set of rhetorical exigencies",
+      "context": "Styles are often identifiable, by analysts and/or by participants; some have names. Styles associated with a particular set of contextual factors that confront a speaker with a particular set of rhetorical exigencies are sometimes called \"registers\" (Biber and Finegan 1994, Finegan and Biber 2001).2 Sets of stance-taking choices associated with participant roles or subject positions are sometimes referred to under the rubric of \"footing\" (Goffman 1981) or \"framing\" (Tannen 1979, 1993) .",
+      "type": "explicit"
+    },
+    "dialect/variety": {
+      "definition": "A set of stance-taking choices associated with a socio-demographic identity category.",
+      "context": "Sets of stance-taking choices associated with participant roles or subject positions are sometimes referred to under the rubric of \"footing\" (Goffman 1981) or \"framing\" (Tannen 1979, 1993) . A set of stance-taking choices associated with a socio-demographic identity category is sometimes referred to as a \"dialect\" or a \"variety\" and may have a popular designation like \"wogspeak\" (Kiesling 2005) or \"Pittsburghese\" (Johnstone & Baumgardt 2004). Biber and Finegan's (1989) pioneering work on stance and style identified statistical clusters of co-ocurring stance markers and interpreted these clusters with relation to functional demands created by situation and participation structure.",
+      "type": "explicit"
+    },
+    "footing/framing": {
+      "definition": "Sets of stance-taking choices associated with participant roles or subject positions.",
+      "context": "Styles associated with a particular set of contextual factors that confront a speaker with a particular set of rhetorical exigencies are sometimes called \"registers\" (Biber and Finegan 1994, Finegan and Biber 2001).2 Sets of stance-taking choices associated with participant roles or subject positions are sometimes referred to under the rubric of \"footing\" (Goffman 1981) or \"framing\" (Tannen 1979, 1993) . A set of stance-taking choices associated with a socio-demographic identity category is sometimes referred to as a \"dialect\" or a \"variety\" and may have a popular designation like \"wogspeak\" (Kiesling 2005) or \"Pittsburghese\" (Johnstone & Baumgardt 2004).",
+      "type": "explicit"
+    }
+  },
+  "264c3ad2d861782583e41130677fb6d7856f9dc3": {
+    "corporate social irresponsibility": {
+      "definition": "corporate actions that negatively affect an identifiable social stakeholder's legitimate claims",
+      "context": "Critics have asked whether CSR was merely symbolic management or corporate 'greenwashing' ( Bowen and Aragon-Correa, 2014; Crilly et al., 2012). Moreover, corporate social irresponsibility (CSiR), i.e. \"corporate actions that negatively affect an identifiable social stakeholder's legitimate claims\" (Vanessa M. Strike et al., 2006), remains widespread. Governments and civil society actors have made efforts to regulate the CSR activities of firms, resulting in a complex web of CSR governance instruments.",
+      "type": "explicit"
+    }
+  },
+  "26af8e81a7ca5b137912acb81d8c19f38fce0200": {
+    "undone science": {
+      "definition": "areas of research identified by social movements and other civil society organizations as having potentially broad social benefit that are left unfunded, incomplete, or generally ignored.",
+      "context": "What explains the selection of certain areas of scientific research and technological design choices and the neglect of others? This shift in focus to the institutional politics of knowledge and innovation brings into sharper relief the problem of \"undone science,\" that is, areas of research identified by social movements and other civil society organizations as having potentially broad social benefit that are left unfunded, incomplete, or generally ignored. This article brings together four recent studies to elaborate the concept of undone science and move forward the more general project of a political sociological approach to the problem of research priorities and scientific ignorance.",
+      "type": "explicit"
+    }
+  },
+  "2d1201d181da2166ccbf1e922634b8b74a58f141": {
+    "rhetorical coercion": {
+      "definition": "an alternative means of conceptualizing the place of rhetoric in politics",
+      "context": "Persuasion does not exhaust the ways through which rhetoric might shape political contest. In particular, we would call attention to culturalist approaches that concentrate on observable rhetorical contests, on narrative and language games. Drawing on this tradition as well as the broad insights of the field of political communication, we propose a model of 'rhetorical coercion' as an alternative means of conceptualizing the place of rhetoric in politics.",
+      "type": "explicit"
+    }
+  },
+  "304b9778edf07175e6964dfa3f37cacec6006197": {
+    "racial bias": {
+      "definition": "biases being held towards ethnicity, and national origin - a person becoming sorted based on personal prejudice",
+      "context": "The passenger's baggage will also be subject to increased surveillance, through additional scans and personal checks. Of obvious concern here is the possibility of discrimination towards particular passengers, biases being held towards ethnicity, and national origin -a person becoming sorted based on personal prejudice. Although, the Gore Commission report stated that it must be ensured that, \"selection is not impermissibly based on national origin, racial, ethnic, and religious or gender characteristics\"(1997).",
+      "type": "implicit"
+    }
+  },
+  "32e71a5d430dafa32b3ac8df7d2b5554b55c3f29": {
+    "biased news media outlet": {
+      "definition": "it systematically slants its broadcast of politician quality to favor either the Republican or the Democratic candidate.",
+      "context": "Voting depends on both ideological preferences and perceived politician quality. We define a news media outlet to be biased if it systematically slants its broadcast of politician quality to favor either the Republican or the Democratic candidate. We consider both voters who rationally update from news reports and voters who are subject to non-rational persuasion",
+      "type": "explicit"
+    }
+  },
+  "34ec13e4a17aff92546ab99472e3ce95524d9add": {
+    "self-selected personalisation/explicit personalisation": {
+      "definition": "situations in which people choose to encounter likeminded opinions exclusively.",
+      "context": "For instance, self-selected personalisation could also be called 'explicit personalisation', and pre-selected personalisation could be called 'implicit personalisation' (Thurman & Schifferes 2012; see also Treiblmaier, Madlberger, Knotzer, & Pollach, 2004). Self-selected personalisation concerns situations in which people choose to encounter likeminded opinions exclusively. For example, a person who opposes immigration might want to avoid information that specifies how much a country has gained due to immigration, while paying a lot of attention to news stories about problems related to immigration.",
+      "type": "explicit"
+    },
+    "pre-selected personalisation/implicit personalisation": {
+      "definition": "personalisation driven by websites, advertisers, or other actors, often without the user's deliberate choice, input, knowledge or consent.",
+      "context": "In communication science, this phenomenon is conceptualised as selective exposure (e.g. Stroud, 2011). Pre-selected personalisation concerns personalisation driven by websites, advertisers, or other actors, often without the user's deliberate choice, input, knowledge or consent. Concerns about pre-selected personalisation are often summarised with the term 'filter bubble' (Pariser, 2011).",
+      "type": "explicit"
+    },
+    "information cocoons": {
+      "definition": "communication universes in which we hear only what we choose and only what comforts us and pleases us",
+      "context": "Sunstein discusses risks of too much personalisation. He mainly addresses self-selected personalisation: people locking themselves in 'information cocoons', which he describes as \"communication universes in which we hear only what we choose and only what comforts us and pleases us\" (Sunstein 2006, p. 9). To give a current example: somebody might self-select personalisation by following people on Twitter who hold like-minded opinions.",
+      "type": "explicit"
+    },
+    "social sorting": {
+      "definition": "obtain[ing] personal and group data in order to classify people and populations according to varying criteria, to determine who should be targeted for special treatment, suspicion, eligibility, inclusion, access, and so on",
+      "context": "Scholars have paid more attention to these topics. Social sorting involves, in Lyon's words, \"obtain[ing] personal and group data in order to classify people and populations according to varying criteria, to determine who should be targeted for special treatment, suspicion, eligibility, inclusion, access, and so on\" (Lyon, 2003, p. 20). In particular, profiling and classification in one domain (for example in advertising) may outgrow its original context and define other domains of our life (Turow, 2011).",
+      "type": "explicit"
+    },
+    "personalisation": {
+      "definition": "the phenomenon that media content is not the same for every user, but tailored to different groups or individuals",
+      "context": "For this paper, personalisation is described as the phenomenon that media content is not the same for every user, but tailored to different groups or individuals. In Section 2, we introduce the notion of personalisation, and distinguish self-selected personalisation from pre-selected personalisation",
+      "type": "explicit"
+    }
+  },
+  "35266513e601aed2e2707e9263b2ccd466644b60": {
+    "affective polarization": {
+      "definition": "Democrats and Republicans both say that the other party's members are hypocritical, selfish, and closed-minded, and they are unwilling to socialize across party lines, or even to partner with opponents in a variety of other activities.",
+      "context": "Democrats and Republicans both say that the other party's members are hypocritical, selfish, and closed-minded, and they are unwilling to socialize across party lines, or even to partner with opponents in a variety of other activities. This phenomenon of animosity between the parties is known as affective polarization",
+      "type": "implicit"
+    }
+  },
+  "35ed340b12c10a5a66504cb2396800486fa5aa26": {
+    "public opinion polarization": {
+      "definition": "a process of alignment along multiple lines of potential disagreement and measured as growing constraint in individuals' preferences.",
+      "context": "Public opinion polarization is here conceived as a process of alignment along multiple lines of potential disagreement and measured as growing constraint in individuals' preferences. Using NES data from 1972 to 2004, the authors model trends in issue partisanship- the correlation of issue attitudes with party identification-and issue alignment-the correlation between pairs of issues-and find a substantive increase in issue partisanship, but little evidence of issue alignment.",
+      "type": "explicit"
+    }
+  },
+  "3a03068318afdaa75a9dbdcbf960d63bf8035f0e": {
+    "local bias": {
+      "definition": "disproportionate preference for local stocks, to an even larger degree than U.S. mutual fund managers do.",
+      "context": "Using a detailed data set on the investments 78,000 U.S. retail investors made through a large discount broker over the six-year period from 1991 to 1996, we find that individual investors exhibit local bias, that is, disproportionate preference for local stocks, to an even larger degree than U.S. mutual fund managers do (see Coval and Moskowitz, 1999). We find that the average share of local investments (defined as the investments into companies headquartered within 250 miles from the investor) is around 30%, both in terms of the number of stocks in the household portfolio and their value.",
+      "type": "explicit"
+    }
+  },
+  "3b50e1808471dd5a8d19a50ef227b03774b80cae": {
+    "mobility-related exclusion": {
+      "definition": "The process by which people are prevented from participating in the economic, political and social life of the community because of reduced accessibility to opportunities, services and social networks, due in whole or in part to insufficient mobility in a society and environment built around the assumption of high mobility.",
+      "context": "What is mobility-related exclusion? We define mobility-related exclusion as: The process by which people are prevented from participating in the economic, political and social life of the community because of reduced accessibility to opportunities, services and social networks, due in whole or in part to insufficient mobility in a society and environment built around the assumption of high mobility. The assumption of car ownership in the UK has resulted in both a culture and a landscape in which mobility is both expected and necessary to participate in society.",
+      "type": "explicit"
+    },
+    "social exclusion": {
+      "definition": "The unique interplay of a number of factors, whose consequence is the denial of access, to an individual or group, to the opportunity to participate in the social and political life of the community, resulting not only in diminished material and non-material quality of life, but also in tempered life chances, choices and reduced citizenship.",
+      "context": "It is a heterogeneous concept, with interrelated causes and components which can, however, be experienced independently of each other and at different times, to different extents, by different individuals and groups. In this paper, we define social exclusion as: The unique interplay of a number of factors, whose consequence is the denial of access, to an individual or group, to the opportunity to participate in the social and political life of the community, resulting not only in diminished material and non-material quality of life, but also in tempered life chances, choices and reduced citizenship. This definition, in highlighting the denial of access to opportunity, places emphasis upon structural constraints to participation, removing the individual culpability that is implied by definitions suggesting an inability to participate in society (Duffy, 1998; Walker and Walker, 1997).",
+      "type": "explicit"
+    }
+  },
+  "4232b05abe413bf3294a560082b0b6bb72dc5a27": {
+    "racial discrimination/racism": {
+      "definition": "includes societal structures, such as residential segregation and social networks, that systematically perpetuate social disadvantage along racial or ethnic lines, even without conscious intent to discriminate",
+      "context": "Racial discrimination, racism: includes societal structures, such as residential segregation and social networks, that systematically perpetuate social disadvantage along racial or ethnic lines, even without conscious intent to discriminate",
+      "type": "explicit"
+    }
+  },
+  "4243aa9bacd51bc02d4240378e7528912962b53e": {
+    "nation brand": {
+      "definition": "the total sum of all perceptions of a nation in the mind of international stakeholders which may contain some of the following elements: people, place, culture/language, history, food, fashion, famous faces (celebrities), global brands etc.",
+      "context": "Every country has a unique name and images in the mind of people both inside and outside the country, so a nation does have brands. A nation brand is the total sum of all perceptions of a nation in the mind of international stakeholders which may contain some of the following elements: people, place, culture/language, history, food, fashion, famous faces (celebrities), global brands etc. A nation's 'brand' exists, with or without any conscious efforts in nation branding, as each country has a current image to its international audience, be it strong or weak, clear or vague (Fan, 2006:12). Two distinctions need to be made. Firstly a nation brand should not be confused with a national brand.",
+      "type": "explicit"
+    },
+    "nation branding": {
+      "definition": "how a nation brand relates to nation branding and what nation branding should or could accomplish.",
+      "context": "It is widely recognised that nation brands exist though opinions differ on what nation branding refers to, how a nation brand relates to nation branding and what nation branding should or could accomplish. The root of such confusion lies in the diverse interpretations of nation brands and branding (details are shown in Figure 1).",
+      "type": "explicit"
+    },
+    "nation's image": {
+      "definition": "what a nation's people want the world to understand is most central, enduring and distinctive about their nation while reputation is a particular type of feedback received by the nation from the outside world, concerning the credibility of the nation's identity claims.",
+      "context": "Image and reputation, which is the reciprocal of image, both are components of a symmetrical communications process between the nation (self) and its international stakeholders (other). Thus, a nation's image is what a nation's people want the world to understand is most central, enduring and distinctive about their nation while reputation is a particular type of feedback received by the nation from the outside world, concerning the credibility of the nation's identity claims. What nation branding concerns is the image and reputation a nation enjoys in the world",
+      "type": "explicit"
+    },
+    "nation's identity": {
+      "definition": "the essentially irrational psychological bond that binds fellow nationals together and which is supposed to constitute the essence of national identity.",
+      "context": "Identity is about self perception. A nation's identity refers to the essentially irrational psychological bond that binds fellow nationals together and which is supposed to constitute the essence of national identity. Image is what is projected to other while reputation is the feedback received from other (Whetten and Mackey, 2002:400).",
+      "type": "explicit"
+    }
+  },
+  "4b33419863b96c270d5875af9bd5af3ce5dbb1e2": {
+    "social amplification of risk": {
+      "definition": "the phenomenon by which information processes, institutional structures, social-group behavior, and individual responses shape the social experience of risk, thereby contributing to risk consequences",
+      "context": "4. A STRUCTURAL DESCRIPTION OF THE SOCIAL AMPLIFICATION OF RISK Social amplification of risk denotes the phenomenon by which information processes, institutional structures, social-group behavior, and individual responses shape the social experience of risk, thereby contributing to risk consequences (Fig. 1). The interaction between risk events and social processes makes clear that, as used in this framework, risk has meaning only to the extent that it treats how people think about the world and its relationships.",
+      "type": "explicit"
+    }
+  },
+  "4d65bab6f9b1fd61885fe187e6014a89592df187": {
+    "publication bias": {
+      "definition": "certain types of statistical results are more likely to be published than other results, conditional on the research design and data used.",
+      "context": "2.2 Publication Bias Publication bias arises if certain types of statistical results are more likely to be published than other results, conditional on the research design and data used. This is usually thought to be most relevant in the case of studies that fail to reject the null hypothesis, which are thought to generate less support for publication among referees and journal editors.",
+      "type": "explicit"
+    }
+  },
+  "4eb5a9745dfc892cb42ed427a5f08e6abf8df7e3": {
+    "partisanship": {
+      "definition": "a type of social identity and, by identifying with one party, individuals divide the world into two groups: their liked in-group (our own party) and a disliked out-group (the other party).",
+      "context": "To explicate our argument, we start conceptually by connecting affective polarization with partisanship partisanship. Partisanship is a type of social identity and, by identifying with one party, individuals divide the world into two groups: their liked in-group (our own party) and a disliked out-group (the other party). This process gives rise to two of the underlying components of affective polarization: in-group favouritism and out-group animosity.",
+      "type": "explicit"
+    }
+  },
+  "502c9122dda395eb30bd0707a85bc235d4e6e3ba": {
+    "publication bias/file drawer problem/bias against the null hypothesis": {
+      "definition": "the tendency to only publish research that demonstrates statistically significant ( p < 0.05) results.",
+      "context": "One key component of the methodology of systematic reviews is therefore a concerted effort to search for and include relevant unpublished work that meets the inclusion criteria to reduce the effects of publication bias. Publication bias [also called the \"file drawer problem\" (Rosenthal 1979) or \"bias against the null hypothesis\" (Cooper 2003)] describes the tendency to only publish research that demonstrates statistically significant ( p < 0.05) results. This practice arose because statistical significance has generally been considered good or important, whereas the absence of a statistical difference has been considered bad or trivial (Cumming 2014, Rosenthal 1979).",
+      "type": "explicit"
+    }
+  },
+  "73bfad11b96a69cb882028ead115751adb55252d": {
+    "fake news": {
+      "definition": "fabricated information that mimics the output of the news media in form, but not in organizational process or intent.",
+      "context": "DEFINITION We define fake news to be fabricated information that mimics the output of the news media in form, but not in organizational process or intent. Most notably, fake news outlets lack the news media's editorial norms and processes for ensuring the accuracy and credibility of information.",
+      "type": "explicit"
+    },
+    "misinformation": {
+      "definition": "incorrect or misleading information about the state of the world.",
+      "context": "Most notably, fake news outlets lack the news media's editorial norms and processes for ensuring the accuracy and credibility of information. Fake news is a subcategory of misinformation-incorrect or misleading information about the state of the world. It is particularly pernicious in that it undermines the credibility of standard news outlets.",
+      "type": "explicit"
+    },
+    "social bots": {
+      "definition": "automated accounts impersonating humans",
+      "context": "There is ample evidence that platforms are highly vulnerable to manipulation. By liking, sharing, and searching for information, social bots (automated accounts impersonating humans) and extreme partisans can amplify the reach of fake news. Bots are numerous and commoditized.",
+      "type": "explicit"
+    }
+  },
+  "885c3154386e3dd1ff6a12e566152846186f9569": {
+    "fake news": {
+      "definition": "fabricated information that mimics news media content in form but not in organizational process or intent",
+      "context": "With the advent of social media, the circulation of \"fake news\" has emerged as a major societal concern. Fake news can be defined as \"fabricated information that mimics news media content in form but not in organizational process or intent\" (Lazer et al. 2018). While some studies suggest most social media users refrain from sharing fake news (Guess, Nagler and Tucker 2019), others argue that false news spread faster and with greater reach than true news (Vosoughi, Roy and Aral 2018).",
+      "type": "explicit"
+    }
+  },
+  "8dd6a2c9c88c9b3465484228c93f4dcc11cfeab9": {
+    "hate speech": {
+      "definition": "language that is used to expresses hatred towards a targeted group or is intended to be derogatory, to humiliate, or to insult the members of the group.",
+      "context": "Both Facebook and Twitter have responded to criticism for not doing enough to prevent hate speech on their sites by instituting policies to prohibit the use of their platforms for attacks on people based on characteristics like race, ethnicity, gender, and sexual orientation, or threats of violence towards others. Drawing upon these definitions, we define hate speech as language that is used to expresses hatred towards a targeted group or is intended to be derogatory, to humiliate, or to insult the members of the group. In extreme cases this may also be language that threatens or incites violence, but limiting our definition only to such cases would exclude a large proportion of hate speech.",
+      "type": "explicit"
+    },
+    "hate speech (2)": {
+      "definition": "speech that targets disadvantaged social groups in a manner that is potentially harmful to them",
+      "context": "What constitutes hate speech and when does it differ fromoffensive language? No formal definition exists but there isa consensus that it is speech that targets disadvantaged social groups in a manner that is potentially harmful to them (Jacobs and Potter 2000; Walker 1994). In the United States, hate speech is protected under the free speech provisions of the First Amendment, but it has been extensively debated in the legal sphere and with regards to speech codes on college campuses",
+      "type": "explicit"
+    },
+    "offensive language": {
+      "definition": "Terms that are highly offensive to certain groups but are used in a qualitatively different manner.",
+      "context": "Importantly, our definition does not include all instances of offensive language because people often use terms that are highly offensive to certain groups but in a qualitatively different manner. For example some African Americans often use the term n*gga in everyday language online (Warner and Hirschberg 2012), people use terms like h*e and b*tch when quoting rap lyrics, and teenagers use homophobic slurs like f*g as they play video games.",
+      "type": "implicit"
+    }
+  },
+  "a7b52fa3ff2606013a6ab9ba294743d7de637e6a": {
+    "structural racism": {
+      "definition": "the totality of ways, in which societies foster racial discrimination, via mutually reinforcing inequitable systems",
+      "context": "A one-unit increase in the frequency of lifetime racial discrimination was associated with a 5% increase in the odds of being very low food secure, even after adjusting for socioeconomic and demographic confounders. Structural racism refers to \"the totality of ways, in which societies foster racial discrimination, via mutually reinforcing inequitable systems (e.g. housing, employment, earnings, benefits, credit, media, health care, criminal justice, etc.)\"30 Beyond interpersonal discrimination, structural racism acknowledges the influence of historic and contemporary policies and practices that are deeply rooted within systems.",
+      "type": "explicit"
+    }
+  },
+  "bff1326ea0f792e3557fc8ad0731733ba7f8b091": {
+    "selection bias": {
+      "definition": "superior firms may intentionally select to engage in prior alliances at a higher rate than inferior firms.",
+      "context": "If firms are aware of the advantages of forming prior alliances, then our findings could exhibit endogeneity driven by selection bias-that is, superior firms may intentionally select to engage in prior alliances at a higher rate than inferior firms. Thus, the OLS coefficient estimates of Prior Alliance could be biased upward due to self-selection.",
+      "type": "implicit"
+    }
+  },
+  "c1e92f1be2387d14dcfaa5e1640a9939724a312a": {
+    "echo chambers": {
+      "definition": "social network formations that transform the ways in which information is transmitted and interpreted by actors",
+      "context": "Within this literature, scholars have invoked the notion of echo chambers to describe how information has become a partisan choice, and how those choices bias toward sources that reinforce beliefs rather than challenge them, regardless of the source's legitimacy (17). Within the broader literature, echo chambers are described as social network formations that transform the ways in which information is transmitted and interpreted by actors (18-22). Scholars have applied this concept to illustrate the dynamics of issue positions of candidates and political parties (23); the public consumption of media (24-25); the homophily of online communication networks (26-28), which focuses on the presence of ties among actors who share the same attribute (29); and multiple aspects of blogs and blog-based discussion (17, 29-33).",
+      "type": "explicit"
+    }
+  },
+  "c84a169e6df175c4662012d3ba7dbf8fa1b5abc9": {
+    "disinformation": {
+      "definition": "Misleading information deliberately aimed at deceiving others.",
+      "context": "Scholars working in the field of the philosophy of information have differentiated between disinformation and misinformation on the basis of the source's intent to deceive (Floridi, 1996). The concept of 'disinformation' refers to misleading information deliberately aimed at deceiving others, while 'misinformation' implies false or inaccurate information circulating as a result of honest mistakes, negligence, or unconscious biases (Fallis, 2015). This conceptual distinction has been highly successful within and beyond the philosophy of information (Habermas, 1989 [1962]; Jack, 2017).",
+      "type": "explicit"
+    },
+    "misinformation": {
+      "definition": "False or inaccurate information circulating as a result of honest mistakes, negligence, or unconscious biases.",
+      "context": "Scholars working in the field of the philosophy of information have differentiated between disinformation and misinformation on the basis of the source's intent to deceive (Floridi, 1996). The concept of 'disinformation' refers to misleading information deliberately aimed at deceiving others, while 'misinformation' implies false or inaccurate information circulating as a result of honest mistakes, negligence, or unconscious biases (Fallis, 2015). This conceptual distinction has been highly successful within and beyond the philosophy of information (Habermas, 1989 [1962]; Jack, 2017).",
+      "type": "explicit"
+    }
+  },
+  "doi:10.1145/3677092": {
+    "linguistic bias": {
+      "definition": "the usage of language to convey a certain view of events, groups, or individuals.",
+      "context": "As media bias is a multifaceted concept with various subtypes [9], we focus on linguistic bias. Linguistic bias is evident in word choice and framing [10, 11, 12] and describes the usage of language to convey a certain view of events, groups, or individuals [9]. Readers are often oblivious to this bias, which can lead to a compromised understanding of issues and promote a skewed perspective [13, 14, 15].",
+      "type": "explicit"
+    }
+  },
+  "dx.doi.org/https://doi.org/10.1016/j.ipm.2021.102505": {
+    "media bias": {
+      "definition": "slanted news coverage or internal bias, reflected in news articles.",
+      "context": "2.1. Media bias Media bias is defined by researchers as slanted news coverage or internal bias, reflected in news articles (Hamborg et al., 2018). By definition, remarkable media bias is deliberate, intentional, and has a particular purpose and tendency towards a particular perspective, ideology, or result (Williams, 1975).",
+      "type": "explicit"
+    },
+    "bias by word choice": {
+      "definition": "when journalists or, more generally, text content producers label the same concepts differently and choose different words to refer to the same concept.",
+      "context": "Different news production process stages introduce various forms of media bias. In this project, we will focus on the bias that arises when journalists or, more generally, text content producers label the same concepts differently and choose different words to refer to the same concept, namely, bias caused by word choice. Depending on which words journalists select to describe an event, inflammatory or neutral, a reader can perceive the information differently.",
+      "type": "explicit"
+    }
+  },
+  "eb29476dd81aefedf2896db42f039f003a0ec5bf": {
+    "hypothetical bias": {
+      "definition": "the difference between what people say they will pay and what they would actually pay",
+      "context": "We found that when real products were used in the hypothetical experiment, the hypothetical bias (the difference between what people say they will pay and what they would actually pay) was not high.",
+      "type": "explicit"
+    }
+  },
+  "https://aclanthology.org/2024.lrec-main.952": {
+    "media bias": {
+      "definition": "a skewed portrayal of information favoring certain group interests, which manifests in multiple facets, including political, gender, racial, and linguistic biases.",
+      "context": "1. Introduction Media bias is a skewed portrayal of information favoring certain group interests (Recasens et al., 2013), which manifests in multiple facets, including political, gender, racial, and linguistic biases. Such subtypes of bias, which can intersect and coexist in complex combinations, make the classification of media bias a challenging task (Raza et al., 2022).",
+      "type": "explicit"
+    }
+  },
+  "https://arxiv.org/abs/2312.16148": {
+    "linguistic bias/lexical bias": {
+      "definition": "a pattern of using certain words that reflects a particular way of thinking about a group or an individual based on their social category.",
+      "context": "Linguistic Bias. Linguistic bias, sometimes called lexical bias [70], refers to a pattern of using certain words that reflects a particular way of thinking about a group or an individual based on their social category. This bias involves a systematic preference for certain words or phrases that may reflect stereotypes or preconceived notions about the group or individual being described [23].",
+      "type": "explicit"
+    },
+    "framing bias": {
+      "definition": "the use of \"subjective words or phrases linked with a particular point of view\" to sway the meaning of a statement.",
+      "context": "In contrast, using the most abstract form of language, one could say \"A is aggressive\" [151, p. 982]. This might or might not be accurate and cannot be judged from the fact that A hit B. Framing Bias is defined as the use of \"subjective words or phrases linked with a particular point of view\" [190, p. 1650] to sway the meaning of a statement. The subjective words are often either one-sided terms or subjective intensifiers [190].",
+      "type": "explicit"
+    },
+    "epistemological bias": {
+      "definition": "the use of linguistic features that subtly focus on the credibility of a statement.",
+      "context": "One-sided terms are words that \"reflect only one of the sides of a contentious issue\" [190, p. 1653], while subjective intensifiers are adjectives or adverbs that reinforce the meaning of a sentence. Epistemological Bias describes the use of linguistic features that subtly focus on the credibility of a statement [190]. Word classes associated with epistemological bias are factive verbs, entailments, assertive verbs, and hedges, see examples in Table 3.",
+      "type": "explicit"
+    },
+    "bias by semantic properties": {
+      "definition": "word choice affects the framing of content and triggers bias.",
+      "context": "Hedges are words used to introduce vagueness to a statement. In contrast to framing bias, epistemological bias is rather subtle and implicit [190]. Bias by Semantic Properties describes how word choice affects the framing of content and triggers bias, similar to framing bias and epistemological bias. The difference, however, is that framing and epistemological bias refer to the individual words used, whereas bias by semantic properties refers to how the sentence is structured [90].",
+      "type": "explicit"
+    },
+    "connotation bias": {
+      "definition": "using connotations to introduce bias to a statement.",
+      "context": "The difference, however, is that framing and epistemological bias refer to the individual words used, whereas bias by semantic properties refers to how the sentence is structured [90]. Connotation Bias refers to using connotations to introduce bias to a statement [187]. While the denotation of a word expresses its literal meaning, the connotation refers to a secondary meaning besides the denotation.",
+      "type": "explicit"
+    },
+    "text-level context bias": {
+      "definition": "the way the context of a text is expressed.",
+      "context": "Text-level Context Bias. Similar to linguistic bias, text-level context bias refers to the way the context of a text is expressed. Words and statements have the power to alter the article's context, influencing the reader's opinion [110]. The types of bias belonging to this category are statement bias [47], phrasing bias [110], and spin bias [155], which consists of omission bias and informational bias [155].",
+      "type": "explicit"
+    },
+    "statement bias": {
+      "definition": "members of the media interjecting their own opinions into the text.",
+      "context": "The types of bias belonging to this category are statement bias [47], phrasing bias [110], and spin bias [155], which consists of omission bias and informational bias [155]. Table 4 lists examples for each subcategory. Statement Bias refers to \"members of the media interjecting their own opinions into the text\" [47, p. 136], which leads to certain news being reported in a way that is more or less favorable towards a particular position [47]. These opinions can be very faint and are expressed \"by disproportionately criticizing one side\" [31, p. 250] rather than \"directly advocating for a preferred [side]\" [31, p. 250].",
+      "type": "explicit"
+    },
+    "phrasing bias": {
+      "definition": "inflammatory words, i.e., non-neutral language",
+      "context": "These opinions can be very faint and are expressed \"by disproportionately criticizing one side\" [31, p. 250] rather than \"directly advocating for a preferred [side]\" [31, p. 250]. Phrasing Bias is characterized by inflammatory words, i.e., non-neutral language [110]. Depending on the context, a word can change from neutral to inflammatory. Therefore, when analyzing bias, the inter-dependencies between words and phrases must be considered [110].",
+      "type": "explicit"
+    },
+    "spin bias": {
+      "definition": "a form of bias introduced either by leaving out necessary information or by adding unnecessary information.",
+      "context": "Therefore, when analyzing bias, the inter-dependencies between words and phrases must be considered [110]. Spin Bias describes a form of bias introduced either by leaving out necessary information [155, 164] or by adding unnecessary information [70]. The underlying motivation is to tell a simple and memorable story [164]. Spin bias can be divided into omission, and informational bias [155].",
+      "type": "explicit"
+    },
+    "selection bias/gatekeeping bias": {
+      "definition": "the selection of content from the body of potential stories by writers and editors.",
+      "context": "Bias types in this category are selection bias, proximity bias, and coverage bias, which are all closely connected. Table 5 lists examples for each subcategory. Selection Bias (or gatekeeping bias) refers to the selection of content from the body of potential stories by writers and editors [47]. Obviously, not all news events can be reported due to the limited resources of newspapers.",
+      "type": "explicit"
+    },
+    "coverage bias": {
+      "definition": "situations in which two or more sides of an issue receive imbalanced amounts of attention.",
+      "context": "Obviously, not all news events can be reported due to the limited resources of newspapers. However, this decision-making process is prone to bias from personal preferences [47, 164, 199, 242]. Coverage Bias describes situations in which two or more sides of an issue receive imbalanced amounts of attention, such as pro-life vs. pro-choice statements [47].18 The level of attention can be measured either in absolute numbers (e.g., there are more articles discussing pro-life than pro-choice topics), how much space the topics get in a newspaper (e.g., printed on the front page), or as the length of the article (e.g., pro-life articles are longer and receive more in-depth coverage than pro-choice articles) [47, 199].",
+      "type": "explicit"
+    },
+    "proximity bias": {
+      "definition": "cultural similarity and geographic proximity as decisive factors.",
+      "context": "The level of attention can be measured either in absolute numbers (e.g., there are more articles discussing pro-life than pro-choice topics), how much space the topics get in a newspaper (e.g., printed on the front page), or as the length of the article (e.g., pro-life articles are longer and receive more in-depth coverage than pro-choice articles) [47, 199]. Proximity Bias focuses on cultural similarity and geographic proximity as decisive factors. Newspapers tend to report more frequently and more in-depth on events that happened nearby [199]. For instance, the more two countries are culturally similar, the more likely it is that events from one region or country will be reported in the other, and the coverage will be more in-depth [77, 199].",
+      "type": "explicit"
+    },
+    "partisan bias": {
+      "definition": "the evaluation of veracity seems dependent on the fit to the reader's party affiliation.",
+      "context": "Partisan Bias. Selective attention to world-view-consistent news has led to research on the effects of political identity. There, the evaluation of veracity seems dependent on the fit to the reader's party affiliation, a phenomenon dubbed partisan bias [18, 82]. Similarly, the hostile media phenomenon (HMP) describes the general observation that members of opposing groups rate a news article as biased against their point of view [231].",
+      "type": "explicit"
+    },
+    "cognitive bias": {
+      "definition": "a systematic deviation from rationality in judgment or decision-making.",
+      "context": "The processing of media information may also be biased by the reader of an article and the state the reader is in during reading. In this review, we use the term cognitive bias, defined as \"a systematic deviation from rationality in judgment or decision-making\" [27, p. 1], to summarize how this processing may be negatively affected. While a failure to detect biased media in a given set of articles may be explained by a lack of ability or motivation (e.g., being inattentive/ disinterested, focusing on identity instead of accuracy motives), biased processing of news by the reader is often attributed to a need for a consistent world view and for overcoming dissonances evoked by discordant information [169].",
+      "type": "explicit"
+    },
+    "framing effects": {
+      "definition": "how media discourse is structured into interpretive packages that give meaning to an issue, so-called frames.",
+      "context": "Much research focuses on these concepts, so we introduce them only briefly and refer to other sources for more information. Framing Effects refer to how media discourse is structured into interpretive packages that give meaning to an issue, so-called frames. Frames promote a specific interpretation of the content or highlight certain aspects while overlooking others. In other words, this type subsumes biases resulting from how events and entities are framed in a text [53, 65].",
+      "type": "explicit"
+    },
+    "hate speech": {
+      "definition": "any language expressing hatred towards a targeted group or intended to be derogatory, humiliate, or insult.",
+      "context": "Frames promote a specific interpretation of the content or highlight certain aspects while overlooking others. In other words, this type subsumes biases resulting from how events and entities are framed in a text [53, 65]. Hate Speech is defined as any language expressing hatred towards a targeted group or intended to be derogatory, humiliate, or insult [51]. Often, hateful language is biased [163].",
+      "type": "explicit"
+    },
+    "gender bias": {
+      "definition": "the dominance of one gender over others in any medium, resulting in the under-representation of the less dominant gender and the formation of stereotypes.",
+      "context": "We categorize gender bias, racial bias, and religion bias under the umbrella term \"group bias,\" as they all refer to biased views toward certain groups. Gender Bias is characterized by the dominance of one gender over others in any medium [43], resulting in the under-representation of the less dominant gender and the formation of stereotypes [43, 183]. It is associated with selection bias [10, 116], coverage bias [32, 135], and context bias at the text level.",
+      "type": "explicit"
+    },
+    "racial bias": {
+      "definition": "the systematic disproportionate representation of ethical groups, often minorities, in a specific context.",
+      "context": "Racial Bias and Religion Bias are other types of group bias. Racial bias refers to the systematic disproportionate representation of ethical groups, often minorities [39], in a specific context [39, 161]. Religion, racial, and gender biases can be observed in word embeddings.",
+      "type": "explicit"
+    },
+    "sentiment analysis": {
+      "definition": "examining text for its emotional content or polarity",
+      "context": "Although the distinction between racial and gender biases is not always evident, they can exist independently [85, 161]. Sentiment Analysis involves examining text for its emotional content or polarity [64]. In the context of media bias, sentiment analysis can detect biases in statements or articles [97, 109] and help identify other concepts like hate speech, political ideology, or linguistic bias [3, 193].",
+      "type": "explicit"
+    }
+  },
+  "https://link.springer.com/article/10.1007/s00799-018-0261-y": {
+    "ideological bias": {
+      "definition": "an outlet biases articles to promote a specific opinion on a topic.",
+      "context": "Mullainathan and Shleifer define two highlevel types of media bias concerned with the intention of news outlets when writing articles: ideology and spin [33]. Ideological bias is present if an outlet biases articles to promote a specific opinion on a topic. Spin bias is present if the outlet attempts to create a memorable story",
+      "type": "explicit"
+    },
+    "coverage bias": {
+      "definition": "the visibility of topics or entities, such as a person or country, in media coverage.",
+      "context": "A second definition of media bias that is commonly used distinguishes between three types: coverage, gatekeeping, and statement (cf. [34]). Coverage bias is concerned with the visibility of topics or entities, such as a person or country, in media coverage. Gatekeeping bias, also called selection bias or agenda bias, relates to which stories media outlets select or reject for reporting.",
+      "type": "explicit"
+    },
+    "gatekeeping bias/selection bias/agenda bias": {
+      "definition": "which stories media outlets select or reject for reporting.",
+      "context": "Coverage bias is concerned with the visibility of topics or entities, such as a person or country, in media coverage. Gatekeeping bias, also called selection bias or agenda bias, relates to which stories media outlets select or reject for reporting. Statement bias, also called presentation bias, is concerned with how articles choose to report on concepts.",
+      "type": "explicit"
+    },
+    "statement bias/presentation bias": {
+      "definition": "how articles choose to report on concepts.",
+      "context": "Gatekeeping bias, also called selection bias or agenda bias, relates to which stories media outlets select or reject for reporting. Statement bias, also called presentation bias, is concerned with how articles choose to report on concepts. For example, in the US elections, a well-observed bias arises from editorial slant [35], in which the editorial position on a given presidential candidate affects the quantity and tone of a newspaper's coverage.",
+      "type": "explicit"
+    },
+    "media bias": {
+      "definition": "a complex model of skewed news coverage with overlapping and partially contradicting definitions",
+      "context": "In our view, the existence of the very concept of spin bias allows drawing two conclusions. First, media bias is a complex model of skewed news coverage with overlapping and partially contradicting definitions. While many instances of media bias fit into one of the other more precisely defined forms of media defined in the news production and consumption process (see Sect. 2.2), some instances of bias do not.",
+      "type": "implicit"
+    }
+  },
+  "https://media-bias-research.org/wp-content/uploads/2024/07/Preprint_ICWSM_25_NewsUnfold": {
+    "media bias": {
+      "definition": "slanted or one-sided media content.",
+      "context": "1 Introduction Media bias, slanted or one-sided media content, impacts public opinion and decision-making processes, especially on web platforms and social media (Ardevol-Abreu and Z ` u´niga ˜ 2017; Eberl, Boomgaarden, and Wagner 2017; Spinde et al. 2023). News consumers are frequently unaware of the extent and influence of bias (Kause, Townsend, and Gaissmaier 2019; Spinde et al. 2020; Ribeiro et al. 2018), leading to limited awareness of specific issues and narrow, one-sided points of view (Ardevol-Abreu and Z ` u´niga 2017; Eberl, ˜ Boomgaarden, and Wagner 2017).",
+      "type": "explicit"
+    }
+  },
+  "https://www.sciencedirect.com/science/article/pii/S0957417423021437": {
+    "coverage bias": {
+      "definition": "the (quantitative and qualitative) visibility of topics or entities in media coverage.",
+      "context": "Coverage bias Coverage bias refers to the (quantitative and qualitative) visibility of topics or entities in media coverage. It is related to the tendency of the media to cover some stories and not others.",
+      "type": "explicit"
+    },
+    "gatekeeping bias/selection bias/agenda bias": {
+      "definition": "the stories that the media select or reject to report.",
+      "context": "3.3.2. Gatekeeping bias Gatekeeping bias, also called selection bias or agenda bias, relates to the stories that the media select or reject to report. This can lead to a biased portrayal of events, as some stories may be deemed more important than others, regardless of their actual importance.",
+      "type": "explicit"
+    },
+    "statement bias/resentation bias": {
+      "definition": "how articles choose to inform about certain entities/concepts.",
+      "context": "3.3.3. Statement bias Statement bias, also called presentation bias, refers to how articles choose to inform about certain entities/concepts. This can be done through the use of loaded language or by presenting one side of an issue as the only side.",
+      "type": "explicit"
+    },
+    "unsubstantiated claims bias": {
+      "definition": "a type of bias that occurs when journalists make claims that are not backed up by evidence.",
+      "context": "3.4.1. Unsubstantiated claims bias Unsubstantiated claims bias is a type of bias that occurs when journalists make claims that are not backed up by evidence. This can lead to people believing things that are not true, or at least not as true as they might be if there was evidence to support the claims.",
+      "type": "explicit"
+    },
+    "opinion statements presented as facts bias": {
+      "definition": "the use of subjective language or statements under the guise of reporting objectively.",
+      "context": "3.4.2. Opinion statements presented as facts bias Opinion statements presented as facts bias is based on the use of subjective language or statements under the guise of reporting objectively. Subjective language is often used in editorials and opinions, as these are designed to persuade the reader to a particular viewpoint.",
+      "type": "explicit"
+    },
+    "sensationalism/emotionalism bias": {
+      "definition": "information is exaggerated in order to create a more emotional reaction.",
+      "context": "3.4.3. Sensationalism/emotionalism bias Sensationalism is a type of bias where information is exaggerated in order to create a more emotional reaction. This can be done by selectively choosing information that supports a certain view, while leaving out information that may contradict it.",
+      "type": "explicit"
+    },
+    "ad hominem bias/mudslingin bias": {
+      "definition": "a journalist attacks another person instead of their argument, while mudslinging bias happens when people attack each other's character instead of debating the issue.",
+      "context": "3.4.4. Ad hominem/mudslingin bias The Ad Hominem bias is when a journalist attacks another person instead of their argument, while mudslinging bias happens when people attack each other's character instead of debating the issue (Yap, 2013). For example, consider a televised debate on healthcare reform.",
+      "type": "explicit"
+    },
+    "mind reading bias": {
+      "definition": "a journalist assumes that he or she knows what another person thinks, feels, or intends without actually speaking to that person.",
+      "context": "3.4.5. Mind reading bias Mind reading is a type of media bias that occurs in journalism when a journalist assumes that he or she knows what another person thinks, feels, or intends without actually speaking to that person. One example of mind reading in journalism can be seen in the way some writers cover political stories.",
+      "type": "explicit"
+    },
+    "slant bias": {
+      "definition": "someone has preferences for one thing over another.",
+      "context": "3.4.6. Slant bias Slant bias is a type of bias that occurs when someone has preferences for one thing over another. It can include cherry-picking information or data to support one side.",
+      "type": "explicit"
+    },
+    "omission bias": {
+      "definition": "a type of media bias in which media outlets choose not to cover certain stories, topics or aspects of stories.",
+      "context": "3.4.7. Omission bias The bias by omission is a type of media bias in which media outlets choose not to cover certain stories, topics or aspects of stories. One example of bias by omission is the lack of coverage of certain political candidates by the news media.",
+      "type": "explicit"
+    },
+    "commission bias": {
+      "definition": "media coverage favors one particular party or side in a dispute, often to the exclusion of the other party or side.",
+      "context": "3.4.8. Commission bias Bias by commission is a type of media bias in which media coverage favors one particular party or side in a dispute, often to the exclusion of the other party or side. One example of this type of bias is when a news organization only interviews people who support a particular political candidate, and does not interview anyone who supports the other candidates.",
+      "type": "explicit"
+    },
+    "bias by labeling and word choice": {
+      "definition": "how the journalist choose the words to present the story.",
+      "context": "3.4.9. Bias by labeling and word choice Labeling and word choice are biases related to how the journalist choose the words to present the story (Hamborg, 2020). If a story is about a controversial issue, the journalist may use loaded language to make one side seem more favorable.",
+      "type": "explicit"
+    },
+    "flawed logic/faulty reasoning bias": {
+      "definition": "leading to conclusions that are not justified by the given evidence.",
+      "context": "3.4.10. Flawed logic bias Flawed logic or faulty reasoning bias consists on leading to conclusions that are not justified by the given evidence. It is related to these logical fallacies (Van Vleet, 2021):",
+      "type": "explicit"
+    },
+    "bias by placement": {
+      "definition": "a story is placed in a position that is more likely to be seen by people.",
+      "context": "3.4.11. Bias by placement Bias by story placement is when a story is placed in a position that is more likely to be seen by people. This can be a deliberate choice by the person who is placing the story, or it can be an accidental choice",
+      "type": "explicit"
+    },
+    "source selection bias": {
+      "definition": "the tendency of journalists to choose sources that will support their stories, instead of choosing sources that will give them an accurate account of what happened.",
+      "context": "3.4.14. Source selection bias Source selection bias is the tendency of journalists to choose sources that will support their stories, instead of choosing sources that will give them an accurate account of what happened. The effects of source selection bias are similar to the effects of commission and omission (Hamborg, Donnay et al., 2019) in that they can lead to a distorted or incomplete view of an event.",
+      "type": "explicit"
+    },
+    "omission of source attribution bias": {
+      "definition": "a journalist does not back up his or her claim with a source, or the source is diffuse, or unspecific.",
+      "context": "3.4.15. Omission of source attribution bias Omission of source attribution happens when a journalist does not back up his or her claim with a source, or the source is diffuse, or unspecific. Some examples of omission of source attribution are phrases such as ''according to a source'', ''critics say'', or ''experts believe''.",
+      "type": "explicit"
+    },
+    "picture selection bias": {
+      "definition": "a type of cognitive bias that refers to the tendency for people to base their judgments on images that are presented to them, rather than on the actual content of the images.",
+      "context": "3.4.16. Picture selection bias This bias is similar to the word choice bias, but for images. Image selection bias is a type of cognitive bias that refers to the tendency for people to base their judgments on images that are presented to them, rather than on the actual content of the images. Picture selection bias can lead people to make judgments about something without considering all of the information that is available. For example, photos taken in the same manifestation can show totally different realities, they can already show violent or peaceful protesters, thus impacting the reader's opinion (Geske, 2016).",
+      "type": "explicit"
+    }
+  },
+  "https://aclanthology.org/2021.findings-emnlp.101": {
+    "media bias": {
+      "definition": "slanted news coverage or internal news article bias",
+      "context": "2 Related Work Media bias can be defined as slanted news coverage or internal news article bias (Recasens et al., 2013). While there are multiple forms of bias, e.g., bias by personal perception or by the omission of information (Puglisi and Snyder, 2015), our focus is on bias caused by word choice, in which different words refer to the same concept.",
+      "type": "explicit"
+    },
+    "lexical bias": {
+      "definition": "bias stemming from specific word choice, and informational bias as sentences conveying information tangential or speculative to sway readers' opinions towards entities.",
+      "context": "tial election\", \"politics\", and \"white house\". Fan et al. (2019) present 300 news articles containing annotations for lexical and informational bias made by two experts. They define lexical bias as bias stemming from specific word choice, and informational bias as sentences conveying information tangential or speculative to sway readers' opinions towards entities (Fan et al., 2019). Their data set, BASIL, allows for analysis at the token level and relative to the target, but only 448 sentences are available for lexical bias.",
+      "type": "explicit"
+    }
+  },
+  "95560085f16dfe9b556d0eea424ef4f7977fb647": {
+    "pro-investment bias": {
+      "type": "implicit",
+      "definition": "Economists favor high capital spending because they believe that it contributes to growth",
+      "context": "Economists favor high capital spending because they believe that it contributes to growth. Politicians have internalized this pro-investment bias and have, other things being equal, pushed for larger investment budgets."
+    }
+  },
+  "167f1d5e64b874bea86acdef6d5476da904fec6a": {
+    "confirmation bias": {
+      "type": "implicit",
+      "definition": "a tendency to test cases known to be targets rather than those known to be nontargets",
+      "context": "Under common circumstances, it can be normatively appropriate to have a second kind of \"confirmation bias,\" namely, a tendency to test cases known to be targets rather than those known to be nontargets. It is also interesting to consider the relations between Ttests and Htests"
+    }
+  },
+  "1901.00596v4": {
+    "Spatial-temporal graph neural networks (STGNNs)": {
+      "definition": "aim to learn hidden patterns from spatial-temporal graphs; consider spatial dependency and temporal dependency at the same time",
+      "context": "Spatial-temporal graph neural networks (STGNNs) aim to learn hidden patterns from spatial-temporal graphs, which become increasingly important in a variety of applications such as traffic speed forecasting [72], driver maneuver anticipation [73], and human action recognition [75]. The key idea of STGNNs is to consider spatial dependency and temporal dependency at the same time. Many current approaches in- tegrate graph convolutions to capture spatial dependency with RNNs or CNNs to model the temporal dependency.",
+      "type": "explicit"
+    },
+    "Convolutional graph neural networks (ConvGNNs)": {
+      "definition": "generalize the operation of convolution from grid data to graph data; idea is to generate a node v’s representation by aggregating its own features xv and neighbors’ features xu; stack multiple graph convolutional layers to extract high-level node representations",
+      "context": "Convolutional graph neural networks (ConvGNNs) gen- eralize the operation of convolution from grid data to graph data. The main idea is to generate a node v’s representation by aggregating its own features xv and neighbors’ features xu, where u ∈ N(v). Different from RecGNNs, ConvGNNs stack multiple graph convolutional layers to extract high-level node representations. ConvGNNs play a central role in building up many other complex GNN models. Figure 2a shows a ConvGNN for node classification. Figure 2b demonstrates a ConvGNN for graph classification.",
+      "type": "implicit"
+    },
+    "Stochastic Steady-state Embedding": {
+      "definition": "learning algorithm that is more scalable to large graphs; updates node hidden states recurrently in a stochastic and asynchronous fashion; alternatively samples a batch of nodes for state update and a batch of nodes for gradient computation",
+      "context": "Stochastic Steady-state Embedding (SSE) proposes a learn- ing algorithm that is more scalable to large graphs [18]. SSE updates node hidden states recurrently in a stochastic and asynchronous fashion. It alternatively samples a batch of nodes for state update and a batch of nodes for gradient computation. To maintain stability, the recurrent function of SSE is defined as a weighted average of the historical states and new states, which takes the form",
+      "type": "implicit"
+    },
+    "Graph autoencoders (GAEs)": {
+      "definition": "unsupervised learning frameworks which encode nodes/graphs into a latent vector space and reconstruct graph data from the encoded information.",
+      "context": "Graph autoencoders (GAEs) are unsupervised learning frameworks which encode nodes/graphs into a latent vector space and reconstruct graph data from the encoded infor- mation. GAEs are used to learn network embeddings and graph generative distributions. For network embedding, GAEs learn latent node representations through reconstructing graph structural information such as the graph adjacency matrix.",
+      "type": "explicit"
+    },
+    "spatial-based ConvGNNs": {
+      "definition": "a graph convolution based on the spectral graph theory",
+      "context": "ConvGNNs are divided into two main streams, the spectral-based approaches and the spatial-based approaches. The first prominent research on spectral-based ConvGNNs was presented by Bruna et al. (2013) [19], which developed a graph convolution based on the spectral graph theory. Since this time, there have been increasing improvements, extensions, and approximations on spectral-based ConvGNNs [20], [21], [22], [23].",
+      "type": "implicit"
+    },
+    "spatial-temporal graph": {
+      "definition": "an attributed graph where the node attributes change dynamically over time.",
+      "context": "Definition 3 (Spatial-Temporal Graph): A spatial-temporal graph is an attributed graph where the node attributes change dynamically over time. The spatial-temporal graph is defined as G(t) = (V, E, X(t) ) with X(t) ∈ Rn×d",
+      "type": "explicit"
+    },
+    "network embedding": {
+      "definition": "a low-dimensional vector representation of a node which preserves a node’s topological information",
+      "context": "A network embedding is a low-dimensional vector rep- resentation of a node which preserves a node’s topological information. GAEs learn network embeddings using an en- coder to extract network embeddings and using a decoder to enforce network embeddings to preserve the graph topological information such as the PPMI matrix and the adjacency matrix.",
+      "type": "explicit"
+    },
+    "Directed Graph": {
+      "definition": "a graph with all edges directed from one node to another",
+      "context": "Definition 2 (Directed Graph): A directed graph is a graph with all edges directed from one node to another. An undi- rected graph is considered as a special case of directed graphs where there is a pair of edges with inverse directions if two nodes are connected. A graph is undirected if and only if the adjacency matrix is symmetric.",
+      "type": "explicit"
+    },
+    "undirected graph": {
+      "definition": "a special case of directed graphs where there is a pair of edges with inverse directions if two nodes are connected, adjacency matrix is symmetric.",
+      "context": "Definition 2 (Directed Graph): A directed graph is a graph with all edges directed from one node to another. An undi- rected graph is considered as a special case of directed graphs where there is a pair of edges with inverse directions if two nodes are connected. A graph is undirected if and only if the adjacency matrix is symmetric.",
+      "type": "explicit"
+    },
+    "receptive field of a node": {
+      "definition": "the set of nodes that contribute to the determination of its final node representation",
+      "context": "Shape of receptive field. The receptive field of a node is the set of nodes that contribute to the determination of its final node representation. When compositing multiple spatial graph convolutional layers, the receptive field of a node grows one step ahead towards its distant neighbors each time. Micheli [24] prove that a finite number of spatial graph convolutional layers exists such that for each node v ∈ V the receptive field of node v covers all nodes in the graph. As a result, a ConvGNN is able to extract global information by stacking local graph convolutional layers.",
+      "type": "explicit"
+    },
+    "VC dimension": {
+      "definition": "measure of model complexity defined as the largest number of points that can be shattered by a model",
+      "context": "The VC dimension is a measure of model complexity defined as the largest number of points that can be shattered by a model. There are few works on analyzing the VC dimension of GNNs. Given the number of model parameter p and the number of nodes n, Scarselli et al. [103] derive that the VC dimension of a GNN* [15] is O(p 4n 2 ) if it uses the sigmoid or tangent hyperbolic activation and is O(p 2n) if it uses the piecewise polynomial activation function. This result suggests that the model complexity of a GNN* [15] increases rapidly with p and n if the sigmoid or tangent hyperbolic activation is used.",
+      "type": "explicit"
+    },
+    "Graph": {
+      "definition": "represented as G = (V, E) where V is the set of vertices or nodes (we will use nodes throughout the paper), and E is the set of edges.",
+      "context": "Definition 1 (Graph): A graph is represented as G = (V, E) where V is the set of vertices or nodes (we will use nodes throughout the paper), and E is the set of edges. Let vi ∈ V to denote a node and eij = (vi , vj ) ∈ E to denote an edge pointing from vj to vi . The neighborhood of a node v is defined as N(v) = {u ∈ V |(v, u) ∈ E}.",
+      "type": "explicit"
+    },
+    "GNNs": {
+      "definition": "deep learning models aiming at addressing graph-related tasks in an end-to-end manner; many explicitly extract high-level representations; are a group of neural network models which are designed for various tasks; can address the network embedding problem through a graph autoencoder framework.",
+      "context": "Meanwhile, GNNs are deep learning models aiming at addressing graph-related tasks in an end-to-end man- ner. Many GNNs explicitly extract high-level representations. The main distinction between GNNs and network embedding is that GNNs are a group of neural network models which are designed for various tasks while network embedding covers various kinds of methods targeting the same task. Therefore, GNNs can address the network embedding problem through a graph autoencoder framework.",
+      "type": "implicit"
+    }
+  },
+  "2025.acl-long.1513": {
+    "narrative in the context of news articles": {
+      "definition": "descriptions of spatiotemporal events and capturing narrative components in the form of semantic relationships between entities.",
+      "context": "The term narrative in the context of news articles has been used in a variety of different formulations. This includes modeling them as descriptions of spatiotemporal events (Norambuena et al., 2023; Silvano et al., 2024) and capturing narrative com- ponents in the form of semantic relationships be- tween entities (Nunes et al., 2024). Related but distinct is the problem of Opinion Mining (Liu and Zhang, 2012; Cortis and Davis, 2021), where the task is to extract the opinion of an entity (opinion holder) on an entity or issue (or group thereof), based on an aspect and deter- mine its polarity.",
+      "type": "implicit"
+    },
+    "Opinion Mining": {
+      "definition": "task to extract the opinion of an entity (opinion holder) on an entity or issue (or group thereof), based on an aspect and determine its polarity.",
+      "context": "This includes modeling them as descriptions of spatiotemporal events (Norambuena et al., 2023; Silvano et al., 2024) and capturing narrative com- ponents in the form of semantic relationships be- tween entities (Nunes et al., 2024). Related but distinct is the problem of Opinion Mining (Liu and Zhang, 2012; Cortis and Davis, 2021), where the task is to extract the opinion of an entity (opinion holder) on an entity or issue (or group thereof), based on an aspect and deter- mine its polarity. Although a restricted subset of narratives can be expressed as opinions, the two concepts serve very different purposes.",
+      "type": "explicit"
+    },
+    "sub-narrative": {
+      "definition": "lower-level (fine) label of our taxonomies, representing a narrower claim within a Narrative.",
+      "context": "Hereafter, we use Narrative (capitalized) to refer to a top-level (coarse) label of our taxonomies. A sub-Narrative is a lower-level (fine) label of our taxonomies, representing a narrower claim within a Narrative. For example, “CO2 is beneficial” is a sub-Narrative of the “Climate Change is beneficial” Narrative of the Climate Change (CC) taxonomy.",
+      "type": "implicit"
+    },
+    "Narratives": {
+      "definition": "overt or implicit claims, recurring across articles and languages, promoting a specific interpretation or viewpoint on an ongoing topic, often propagating mis/disinformation.",
+      "context": "We present PolyNarrative, a new multilingual dataset of news articles, annotated for narra- tives. Narratives are overt or implicit claims, recurring across articles and languages, promot- ing a specific interpretation or viewpoint on an ongoing topic, often propagating mis/disinfor- mation. We developed two-level taxonomies with coarse- and fine-grained narrative labels for two domains: (i) climate change and (ii) the military conflict between Ukraine and Russia.",
+      "type": "explicit"
+    }
+  },
+  "2106.04554v2": {
+    "vanilla Transformer": {
+      "definition": "sequence-to-sequence model and consists of an encoder and a decoder, each of which is a stack of L identical blocks.",
+      "context": "2.1 Vanilla Transformer The vanilla Transformer [137] is a sequence-to-sequence model and consists of an encoder and a decoder, each of which is a stack of L identical blocks. Each encoder block is mainly composed of a multi-head self-attention module and a position-wise feed-forward network (FFN).",
+      "type": "explicit"
+    }
+  },
+  "2106.16117v1": {
+    "short-term energy security": {
+      "definition": "the ability of the energy system to react promptly to sudden changes in the supplydemand balance",
+      "context": "Nevertheless, the IEA admits that the concept of ‘energy security’ can be divided into two major groups: long-term energy security and short-term energy security. The first one embraces ‘timely investments to supply energy in line with economic developments and environmental needs’, while the latter deals with ‘the ability of the energy system to react promptly to sudden changes in the supply- demand balance’ [2]. Nowadays one of the major energy importing country is China that is primarily preoccupied with the security of the energy supply.",
+      "type": "explicit"
+    },
+    "long-term energy security": {
+      "definition": "timely investments to supply energy in line with economic developments and environmental needs",
+      "context": "Nevertheless, the IEA admits that the concept of ‘energy security’ can be divided into two major groups: long-term energy security and short-term energy security. The first one embraces ‘timely investments to supply energy in line with economic developments and environmental needs’, while the latter deals with ‘the ability of the energy system to react promptly to sudden changes in the supply- demand balance’ [2].",
+      "type": "implicit"
+    }
+  },
+  "2303.14725v2": {
+    "natural language inference/recognizing textual entailment": {
+      "definition": "a 3-way classification task labelling as entailment, contradiction and neutral, to identify whether the given premise entails a hypothesis",
+      "context": "Natural language inference (NLI), also known as recognizing textual entailment (RTE), is a typical task in NLP. It is a 3-way classification task labelling as entailment, contradiction and neutral, to identify whether the given premise entails a hypothesis. An entailment is described as a conclusion that a person would typically infer from the premise or the implication described by the premise.",
+      "type": "explicit"
+    },
+    "assertion-based reasoning/theoretical reasoning": {
+      "definition": "Reasoning is to infer conclusions from a set of premises, consisting of one or more inference steps, where premises and conclusions are assertions that claim something is true or false about the world.",
+      "context": "Definition 2.1 (logic-based reasoning). Reasoning is to discover valid conclusions by applying logic [3, 14, 41, 91, 155]. Definition 2.2 (assertion-based reasoning / theoretical reasoning). Reasoning is to infer conclusions from a set of premises, consisting of one or more inference steps, where premises and conclusions are assertions that claim something is true or false about the world [3, 9, 14, 123, 155]. Definition 2.3 (action-based reasoning / practical reasoning). Practical reasoning is to infer actions from goals and knowledge, which is oriented to deciding whether an action is practically reasonable [9, 155].",
+      "type": "explicit"
+    },
+    "action-based reasoning / practical reasoning": {
+      "definition": "Practical reasoning is to infer actions from goals and knowledge, which is oriented to deciding whether an action is practically reasonable",
+      "context": "Definition 2.2 (assertion-based reasoning / theoretical reasoning). Reasoning is to infer conclusions from a set of premises, consisting of one or more inference steps, where premises and conclusions are assertions that claim something is true or false about the world [3, 9, 14, 123, 155]. Definition 2.3 (action-based reasoning / practical reasoning). Practical reasoning is to infer actions from goals and knowledge, which is oriented to deciding whether an action is practically reasonable [9, 155]. 2.1.2 Definition in NLP we suggest. According to Definition 2.2, Definition 2.3 and negation-based description 2.2, we can know “what is reasoning” and “what isn’t reasoning” from the perspective of philosophy.",
+      "type": "explicit"
+    },
+    "Multi-hop question answering (MHQA)": {
+      "definition": "studies answering the complex questions that require reasoning over evidence scattered in different contexts",
+      "context": "Multi-hop question answering (MHQA) studies answering the complex questions that require reasoning over evidence scattered in different contexts8 , thus it is also called as multi-hop reading comprehension, where candidate contexts are either explicitly provided involving some distractors [54, 151, 159, 169] (distractor setting), or can be retrieved from external knowledge bases such as Wikipedia [45, 109, 169] and WorldTree [73] (retrieval setting).",
+      "type": "explicit"
+    },
+    "Natural Language Reasoning (NLR)": {
+      "definition": "a process to integrate multiple knowledge (e.g. encyclopedic knowledge and commonsense knowledge) to derive some new conclusions about the (realistic or hypothetical) world",
+      "context": "It should be emphasized that conclusions are new (or unknown) assertions, events, or actions, which distinguishes reasoning from other knowledge-intensive tasks that may also require multiple knowledge. Definition 2.4 (NLP reasoning): Natural language reasoning is a process to integrate multiple knowledge (e.g. encyclopedic knowledge and commonsense knowledge) to derive some new conclusions about the (realistic or hypothetical) world. Knowledge can be from both explicit and implicit sources. Conclusions are assertions or events assumed to be true in the world, or practical actions.",
+      "type": "explicit"
+    },
+    "logic-based reasoning": {
+      "definition": "Reasoning is to discover valid conclusions by applying logic",
+      "context": "Description 2.2 (negation-based). Reasoning is a dynamic process to get some knowledge without direct recourse to sense perceptions or immediate experience, which is opposed to sensation, perception and feeling [3, 14, 155]. Definition 2.1 (logic-based reasoning). Reasoning is to discover valid conclusions by applying logic [3, 14, 41, 91, 155]. Definition 2.2 (assertion-based reasoning / theoretical reasoning). Reasoning is to infer conclusions from a set of premises, consisting of one or more inference steps, where premises and conclusions are assertions that claim something is true or false about the world [3, 9, 14, 123, 155].",
+      "type": "explicit"
+    },
+    "Backward reasoning": {
+      "definition": "a top-down procedure, which starts from the problem and repeatedly breaks down into sub-problems until all of them can be solved by the existing knowledge",
+      "context": "The other, backward reasoning, is a top-down procedure, which starts from the problem and repeatedly breaks down into sub-problems until all of them can be solved by the existing knowledge. While backward reasoning targets the specified problems, forward reasoning can freely uncover new knowledge implicated by the existing knowledge without preassigned problems.",
+      "type": "explicit"
+    },
+    "Forward reasoning": {
+      "definition": "a bottom-up procedure, which starts from the existing knowledge and repeatedly makes inferences to obtain new knowledge until the problem is solved",
+      "context": "Two Directions of reasoning. Multi-step reasoning can be performed by either forward [28, 130, 142, 158] or backward [74, 83, 97, 107, 143]. Forward reasoning is a bottom-up procedure, which starts from the existing knowledge and repeatedly makes inferences to obtain new knowledge until the problem is solved.",
+      "type": "explicit"
+    },
+    "NLP proposition": {
+      "definition": "the semantic meaning or information content of a statement rather than its superficial linguistic.",
+      "context": "We put the two key concepts into NLP in Definition 2.5 and Definition 2.6. Definition 2.5 (NLP proposition). A proposition is the semantic meaning or information content of a statement rather than its superficial linguistic. Definition 2.6 (NLP inference). Inference is a single step that produces a single (intermediate) conclusion from some premises.",
+      "type": "explicit"
+    },
+    "NLP reasoning": {
+      "definition": "a process to integrate multiple knowledge (e.g. encyclopedic knowledge and commonsense knowledge) to derive some new conclusions about the (realistic or hypothetical) world. Knowledge can be from both explicit and implicit sources.",
+      "context": "To better demonstrate the definition, we explain why some knowledge-intensive datasets are not reasoning in Table 3. Definition 2.4 (NLP reasoning). Natural language reasoning is a process to integrate multiple knowledge (e.g. encyclopedic knowledge and commonsense knowledge) to derive some new conclusions about the (realistic or hypothetical) world. Knowledge can be from both explicit and implicit sources. Conclusions are assertions or events assumed to be true in the world, or practical actions.",
+      "type": "explicit"
+    },
+    "NLP inference": {
+      "definition": "a single step that produces a single (intermediate) conclusion from some premises",
+      "context": "Definition 2.5 (NLP proposition). A proposition is the semantic meaning or information content of a statement rather than its superficial linguistic. Definition 2.6 (NLP inference). Inference is a single step that produces a single (intermediate) conclusion from some premises. Further clarify the definition of NLP reasoning.",
+      "type": "explicit"
+    },
+    "reasoning": {
+      "definition": "reasoning",
+      "context": "Natural Language Processing (NLP) has shown significant advancements in recent years, particularly with the introduction of transformers and pre-trained language models (PLMs). However, their abilities to perform natural language reasoning (NLR) are still far from satisfactory. Reasoning, the process of making inferences based on existing knowledge, is a fundamental aspect of human intelligence and is essential for complex tasks such as decision-making.",
+      "type": "explicit"
+    },
+    "Reasoning": {
+      "definition": "using evidence and logic to arrive at conclusions",
+      "context": "Although many researches [25, 58, 167, 174] refer to a definition of reasoning from philosophy and logic, the definition cannot capture the reasoning in NLP well enough. For example, while reasoning is philosophically defined as “using evidence and logic to arrive at conclusions” [58], it fails to clarify whether implicit commonsense knowledge can be evidence and what types of conclusion are reasoning products, e.g. how about named-entity disambiguation? To promote the research on reasoning in NLP, we make an attempt to propose a clearer view of NLP reasoning, both conceptually and practically.",
+      "type": "explicit"
+    },
+    "Deduction": {
+      "definition": "is to infer valid knowledge (conclusion) from the given knowledge (premises).",
+      "context": "The definitions are shown below (Table 4 shows examples). Definition 2.7 (Deduction). A deductive inference is to infer valid knowledge (conclusion) from the given knowledge (premises). Definition 2.8 (Induction). An inductive inference is to infer probable knowledge, which describes a more general rule, extrapolated from the given knowledge.",
+      "type": "explicit"
+    },
+    "Induction": {
+      "definition": "to infer probable knowledge, which describes a more general rule, extrapolated from the given knowledge.",
+      "context": "Definition 2.7 (Deduction). A deductive inference is to infer valid knowledge (conclusion) from the given knowledge (premises). Definition 2.8 (Induction). An inductive inference is to infer probable knowledge, which describes a more general rule, extrapolated from the given knowledge. Definition 2.9 (Abduction). An abductive inference is to infer probable knowledge, as the best explanation (i.e. cause), for the given knowledge (i.e. phenomena).",
+      "type": "explicit"
+    },
+    "Abduction": {
+      "definition": "An abductive inference is to infer probable knowledge, as the best explanation (i.e. cause), for the given knowledge (i.e. phenomena).",
+      "context": "Definition 2.8 (Induction). An inductive inference is to infer probable knowledge, which describes a more general rule, extrapolated from the given knowledge. Definition 2.9 (Abduction). An abductive inference is to infer probable knowledge, as the best explanation (i.e. cause), for the given knowledge (i.e. phenomena). However, among these three classes, researches on abduction and induction are much under-explored than deduction, while the widely studied deduction is only a very small set of human daily reasoning.",
+      "type": "explicit"
+    }
+  },
+  "3457607": {
+    "aggregation bias/ecological fallacy": {
+      "definition": "arises when false conclusions are drawn about individuals from observing the entire population.",
+      "context": "Aggregation Bias. Aggregation bias (or ecological fallacy) arises when false conclusions are drawn about individuals from observing the entire population. An example of this type of bias can be seen in clinical aid tools.",
+      "type": "implicit"
+    },
+    "Modifiable Areal Unit Problem": {
+      "definition": "a statistical bias in geospatial analysis, which arises when modeling data at different levels of spatial aggregation results in different trends learned when data is aggregated at different spatial scales",
+      "context": "Modifiable Areal Unit Problem is a statistical bias in geospatial analysis, which arises when modeling data at different levels of spatial aggregation. This bias results in different trends learned when data is aggregated at different spatial scales.",
+      "type": "explicit"
+    },
+    "Measurement / Reporting Bias": {
+      "definition": "arises from how we choose, utilize, and measure particular features",
+      "context": "Measurement Bias. Measurement, or reporting, bias arises from how we choose, utilize, and measure particular features. An example of this type of bias was observed in the re- cidivism risk prediction tool COMPAS, where prior arrests and friend/family arrests were used as proxy variables to measure level of “riskiness” or “crime”—which on its own can be viewed as mismeasured proxies.",
+      "type": "explicit"
+    },
+    "AI Fairness 360": {
+      "definition": "toolkit developed by IBM to help moving fair- ness research algorithms into an industrial setting and to create a benchmark for fairness algo- rithms to get evaluated and an environment for fairness researchers to share their ideas.",
+      "context": "Aequitas produces reports from the obtained data that helps data scientists, machine learning researchers, and policymakers to make conscious decisions and avoid harm and damage toward certain pop- ulations. AI Fairness 360 (AIF360) is another toolkit developed by IBM to help moving fair- ness research algorithms into an industrial setting and to create a benchmark for fairness algo- rithms to get evaluated and an environment for fairness researchers to share their ideas . These types of toolkits can be helpful for learners, researchers, and people working in the in- dustry to move towards developing fair machine learning application away from discriminatory behavior.",
+      "type": "explicit"
+    },
+    "Omitted Variable Bias": {
+      "definition": "occurs when one or more important variables are left out of the model",
+      "context": "Omitted Variable Bias. Omitted variable bias occurs when one or more important variables are left out of the model. An example for this case would be when someone designs a model to predict, with relatively high accuracy, the annual percentage rate at which customers will stop subscribing to a service, but soon observes that the majority of users are canceling their subscription without receiving any warning from the designed model.",
+      "type": "explicit"
+    },
+    "User Interaction Bias": {
+      "definition": "a type of bias that can not only be observant on the Web but also get triggered from two sources—the user interface and through the user itself by imposing his/her self-selected biased behavior and interaction",
+      "context": "User Interaction Bias. User Interaction bias is a type of bias that can not only be observant on the Web but also get triggered from two sources—the user interface and through the user itself by imposing his/her self-selected biased behavior and interaction. This type of bias can be influenced by other types and subtypes, such as presentation and ranking biases.",
+      "type": "explicit"
+    },
+    "Representation Bias": {
+      "definition": "arises from how we sample from a population during data collection process",
+      "context": "Representation Bias. Representation bias arises from how we sample from a population during data collection process. Non-representative samples lack the diversity of the population, with missing subgroups and other anomalies.",
+      "type": "implicit"
+    },
+    "Simpson’s Paradox": {
+      "definition": "a type of aggregation bias that arises in the analysis of heterogeneous data. The paradox arises when an association observed in aggregated data disappears or reverses when the same data is disaggregated into its underlying subgroups.",
+      "context": "Simpson’s Paradox. Simpson’s paradox is a type of aggregation bias that arises in the analysis of heterogeneous data. The paradox arises when an association observed in aggregated data disappears or reverses when the same data is disaggregated into its underlying subgroups.",
+      "type": "implicit"
+    },
+    "Measurement Bias": {
+      "definition": "arises from how we choose, utilize, and measure particular features",
+      "context": "Measurement Bias. Measurement, or reporting, bias arises from how we choose, utilize, and measure particular features. An example of this type of bias was observed in the recidivism risk prediction tool COMPAS, where prior arrests and friend/family arrests were used as proxy variables to measure level of “riskiness” or “crime”—which on its own can be viewed as mismeasured proxies.",
+      "type": "explicit"
+    },
+    "Aggregation Bias": {
+      "definition": "arises when false conclusions are drawn about individuals from observing the entire population",
+      "context": "Aggregation Bias. Aggregation bias (or ecological fallacy) arises when false conclusions are drawn about individuals from observing the entire population. An example of this type of bias can be seen in clinical aid tools.",
+      "type": "implicit"
+    },
+    "Algorithmic Bias": {
+      "definition": "when the bias is not present in the input data and is added purely by the algorithm",
+      "context": "Algorithmic Bias. Algorithmic bias is when the bias is not present in the input data and is added purely by the algorithm. The algorithmic design choices, such as use of certain optimization functions, regularizations, choices in applying regression models on the data as a whole or considering subgroups, and the general use of statistically biased estimators in algorithms, can all contribute to biased algorithmic decisions that can bias the outcome of the algorithms.",
+      "type": "explicit"
+    },
+    "Popularity Bias": {
+      "definition": "Items that are more popular tend to be exposed more",
+      "context": "Popularity Bias. Items that are more popular tend to be exposed more. However, popularity metrics are subject to manipulation—for example, by fake reviews or social bots. As an instance, this type of bias can be seen in search engines or recommendation systems where popular objects would be presented more to the public.",
+      "type": "implicit"
+    },
+    "Sampling Bias": {
+      "definition": "similar to representation bias, and it arises due to non-random sampling of subgroups.",
+      "context": "Sampling Bias. Sampling bias is similar to representation bias, and it arises due to non-random sampling of subgroups. As a consequence of sampling bias, the trends estimated for one population may not generalize to data collected from a new population. For the intuition, consider the example in Figure 2.",
+      "type": "explicit"
+    },
+    "Ranking Bias": {
+      "definition": "The idea that top-ranked results are the most relevant and important will result in attraction of more clicks than others",
+      "context": "Ranking Bias. The idea that top-ranked results are the most relevant and important will result in attraction of more clicks than others. This bias affects search engines and crowdsourcing applications",
+      "type": "explicit"
+    },
+    "Fairness": {
+      "definition": "the absence of any prejudice or favoritism toward an individual or group based on their inherent or acquired characteristics",
+      "context": "However, like people, algorithms are vulnerable to biases that render their decisions “unfair”. In the context of decision-making, fairness is the absence of any prejudice or favoritism toward an individual or group based on their inherent or acquired characteristics. Thus, an unfair algorithm is one whose decisions are skewed toward a particular group of people.",
+      "type": "explicit"
+    }
+  },
+  "3584741": {
+    "computational narrative representations": {
+      "definition": "an event structure that represents different stories.",
+      "context": "However, to provide a more focused review, we will focus exclusively on event-based narra- tive representations. Thus, we define computational narrative representations as an event structure that represents different stories. We note that these event structures are discrete in nature (e.g., a graph or a timeline of events).",
+      "type": "explicit"
+    },
+    "open source intelligence (OSINT)": {
+      "definition": "intelligence that is synthesized using publicly available data.",
+      "context": "Open Source Intelligence. Open Source Intelligence (OSINT) is intelligence that is synthesized using publicly available data [32]. Although OSINT data sources leverage more than just tradi- tional news articles [38], OSINT could still benefit from news narrative extraction techniques.",
+      "type": "explicit"
+    },
+    "measure of positive redundancy": {
+      "definition": "the probability of a headline being duplicated",
+      "context": "Spread is based on the intuitive idea that a relevant event will be reported in multiple news outlets—that is, its reporting will be spread over multiple headlines. Thus, it is a measure of positive redundancy and is formally defined as the probability of a headline being duplicated. To estimate whether two headlines are duplicates, the system uses a supervised logistic regression model trained on semantic similarity measures based on paraphrase detection literature [72].",
+      "type": "explicit"
+    },
+    "News Narrative Extraction": {
+      "definition": "Given a set of news articles, the news narrative extraction task generates a discrete structure comprised of events to represent the narrative.",
+      "context": "Leveraging our previous discussion of narratives as a structured system of interrelated stories, we define the (event-based) narrative extraction task as follows: News Narrative Extraction: Given a set of news articles, the news narrative extraction task generates a discrete structure comprised of events to represent the narrative. We note that the structure is left deliberately ambiguous to allow for different types of representations, such as event timelines or event graphs.",
+      "type": "explicit"
+    },
+    "content dependence degree": {
+      "definition": "aggregation of all mutual information among the features of each event",
+      "context": "After obtaining the events, the next step is to compute the two core metrics that define the TEMs. The content dependence degree is defined as the aggregation of all mutual information among the features of each event. The content reference degree is defined by the presence of core features of an event—salient terms based on frequency—in other events.",
+      "type": "explicit"
+    },
+    "time continuity factor": {
+      "definition": "exponential penalty term dependent on the temporal distance between events.",
+      "context": "Next, entity relatedness is measured by the average affinity of the entities from each pair of articles using normalized point-wise mutual information. The time continuity factor is simply defined as an exponential penalty term dependent on the temporal distance between events. The coherence graph is built by creating edges between documents that have a coherence score above a given threshold.",
+      "type": "explicit"
+    },
+    "document similarity": {
+      "definition": "content similarity (e.g., cosine similarity) and a negative exponential penalty for temporally distant documents.",
+      "context": "These representations are used with Hierarchical Agglomerative Clustering (HAC) [113] to construct the article clusters that represent the events. For the purposes of clustering, document similarity is defined by content similarity (e.g., cosine similarity) and a negative exponential penalty for temporally distant documents. Huang et al. [48] propose a different event evolution approach to build and analyze event relationships based on three types of event connections.",
+      "type": "explicit"
+    },
+    "metro maps method": {
+      "definition": "a structured summarization approach that captures the evolution of multiple stories and their interactions.",
+      "context": "Graph-Based Representations. Metro maps [98, 99] are an extension of the Connect the Dots ap- proach that represents more than a single storyline using a directed acyclic graph of events. In par- ticular, the metro maps method is a structured summarization approach that captures the evolution of multiple stories and their interactions. The stories are represented using a metro map metaphor, where each metro line represents a story and stations represent key events.",
+      "type": "explicit"
+    },
+    "differentia words": {
+      "definition": "built from the set difference between the articles (in temporal order) and represent new knowledge in the story.",
+      "context": "For adjacent articles, genus words are computed using the intersection of their word sets and represent already known information in the story. In contrast, differentia words are built from the set difference between the articles (in temporal order) and represent new knowledge in the story. Thus, differentia words are more important when trying to find coherent sequences of articles. The",
+      "type": "explicit"
+    },
+    "breakpoints": {
+      "definition": "points in time where a significant development or change occurs (i.e., important events).",
+      "context": "To generate the final sentence selection in each time period, the system optimizes a weighted ranking generated by both components. Hu et al. [46] propose a timeline overview method for news based on the concept of breakpoints—points in time where a significant development or change occurs (i.e., important events). Their extraction approach consists of three steps.",
+      "type": "explicit"
+    },
+    "genus words": {
+      "definition": "using the intersection of their word sets and represent already known information in the story.",
+      "context": "In particular, the authors use the concepts of genus and differentia words. For adjacent articles, genus words are computed using the intersection of their word sets and represent already known information in the story. In contrast, differentia words are built from the set difference between the articles (in temporal order) and represent new knowledge in the story. Thus,",
+      "type": "explicit"
+    },
+    "narratives": {
+      "definition": "a systematic collection of interrelated stories with coherent themes.",
+      "context": "Halverson et al. [42] define narratives not just as one story but rather as a system of stories. In other words, narratives are a systematic collection of interrelated stories with coherent themes. Stories are defined as sequences of events tied together in a coherent fashion.",
+      "type": "explicit"
+    },
+    "Coherence": {
+      "definition": "the geometric mean of the content similarity of events, using cosine or angular similarity, and their topical similarity, based on JS similarity of their topic distributions based on clustering.",
+      "context": "The optimization problem is based on maximizing coherence subject to coverage constraints. Coherence measures how much sense it makes to connect two events together and is defined as the geometric mean of the content similarity of events, using cosine or angular similarity, and their topical similarity, based on JS similarity of their topic distributions based on clustering. Coverage is measured by the average percentage of topical clusters covered by the selected events based on their topic distributions.",
+      "type": "explicit"
+    },
+    "Relevance": {
+      "definition": "the KLD between the summary items and the internal representation of the query",
+      "context": "All these terms are based on the Kullback-Leibler Divergence (KLD) [53] of the summary items with a target distribution. Relevance is related to a user-defined query and is defined as the KLD between the summary items and the internal representation of the query. Coverage is based on a global term–KLD between the summary items and the whole corpus–and a local term–KLD between the summary items and the set of sentences from the same date.",
+      "type": "explicit"
+    },
+    "stories": {
+      "definition": "sequences of events tied together in a coherent fashion.",
+      "context": "In other words, narratives are a systematic collection of interrelated stories with coherent themes. Stories are defined as sequences of events tied together in a coherent fashion. In this definition, events are the fundamental units of narrative action—they are either an act involving characters and entities or a happening where no entities are causally involved [1].",
+      "type": "explicit"
+    },
+    "events": {
+      "definition": "the fundamental units of narrative action—they are either an act involving characters and entities or a happening where no entities are causally involved.",
+      "context": "Stories are defined as sequences of events tied together in a coherent fashion. In this definition, events are the fundamental units of narrative action—they are either an act involving characters and entities or a happening where no entities are causally involved [1]. We leverage this definition to model news narratives. Thus,",
+      "type": "explicit"
+    }
+  },
+  "How_to_define_ecology_on_the_basis_of_its_current_understanding": {
+    "Ecological equilibrium": {
+      "definition": "ecosystems develop on the basis of spontaneous self-organization processes and their achieved organization (and order) is maintained by spontaneous self-regulation processes.",
+      "context": "Ecological equilibrium in this new systemic view means that ecosystems develop on the basis of spontaneous self-organization processes and their achieved organization (and order) is maintained by spontaneous self-regulation processes. Therefore, the new aim of ecosystem management is to improve and maintain, or recover, their ecological integrity, which is the indicator of the health of the respective ecological and biological system (Woodley, 2010; Sabo et al., 2017, 2020; Plesník, 2019).",
+      "type": "explicit"
+    },
+    "Ecological stability": {
+      "definition": "an ecosystem, a landscape or an ecoregion exists in a state of equilibrium or in cyclically repeating sequences of several quasi-equilibrium states, while the basic mechanism keeping ecosystems in such an equilibrium is a negative feedback.",
+      "context": "Therefore, the logical aim of ecosystem management was to maintain their natural “ecological equilibrium”, measured and quantified by means of the indicators of ecological stability. Ecological stability (in the sense of homeostasis) means that an ecosystem, a landscape or an ecoregion exists in a state of equilibrium or in cyclically repeating sequences of several quasi- equilibrium states, while the basic mechanism keeping ecosystems in such an equilibrium is a negative feedback. However, according to many paleontological studies, literature reviews and meta-analyses, the “equilibrium state in an ecosystem is rather rare” (Rohde, 2006): thus, stable, unchanging ecosystems practically do not exist in nature (Botkin, 2016).",
+      "type": "explicit"
+    },
+    "Ecology": {
+      "definition": "it deals with the economy of nature. This necessarily includes the study of organisms, their distribution, mutual relations and interactions, as well as their requirements for and interactions with their place for life – the environment.",
+      "context": "The term ecology has the same roots as the word economy (from the Greek “oikos” – household, home, place for life); therefore, with a certain simplification, we can say that it deals with the economy of nature (Ricklefs and Relyea, 2014). This necessarily includes the study of organisms, their distribution, mutual relations and interactions, as well as their requirements for and interactions with their place for life – the environment.",
+      "type": "explicit"
+    }
+  },
+  "Rosen_gjcpi_2018_3": {
+    "Sustainable development": {
+      "definition": "development that has the ability to be sustained into the future for some lengthy period of time, and can be viewed as the sustained and continuous improvement of a system or process.",
+      "context": "Sustainable development can be thought of as development that has the ability to be sustained into the future for some lengthy period of time, and can be viewed as the sustained and continuous improvement of a system or process (Kates et al. 2005; Rosen 2017a). Development implies a qualitative improvement and dif- fers from simple growth, which is a quantitative increase scale.",
+      "type": "explicit"
+    },
+    "Sustainability": {
+      "definition": "“the possibility that human and other forms of life will flourish on the planet forever”.",
+      "context": "A simple definition sustainability was stated by Ehrenfeld, who defined sustainability as “the possibility that human and oth- er forms of life will flourish on the planet forever”. Although this definition incorporates environmental and societal aspects, the timescale is impractical.",
+      "type": "implicit"
+    }
+  },
+  "Survey_on_terminology_extraction_from_texts": {
+    "PoS tagging": {
+      "definition": "Assigning a PoS tag to each word or token in the texts to indicate the word’s grammatical role and lexical category within the sentence.",
+      "context": "Lemmatization: Transforming various forms of vocabulary into their base forms, which are lemmas or stems. • PoS tagging: Assigning a PoS tag to each word or token in the texts to indicate the word’s grammatical role and lexical category within the sentence. This task is not mandatory in preprocessing. At present, there is a wide range of preprocessing tools available, catering to both English texts, such as TweetNLP,4 Stanford CoreNLP,5 and NLTK,6 and Chinese texts, including HanLP,7 jieba,8 and THULAC.9",
+      "type": "explicit"
+    },
+    "Cleaning": {
+      "definition": "Removing irrelevant content from the texts, such as stopwords, special characters, HTML tags, numbers, and punctuation marks.",
+      "context": "The first step in terminology extraction is preprocessing the raw texts, as shown in Fig. 5. During the preprocessing stage, the most common tasks include: • Cleaning: Removing irrelevant content from the texts, such as stopwords, special characters, HTML tags, numbers, and punctuation marks. • Tokenization: Segmenting into the smallest meaningful units, such as words or phrases.",
+      "type": "explicit"
+    }
+  },
+  "daw084": {
+    "interactive health literacy": {
+      "definition": "the abilities to act and interact successfully to improve health, and to utilize different forms of communication to obtain, provide, and apply relevant health information.",
+      "context": "A secondary outcome of functional health literacy is that people know more about health issues. Interactive health literacy includes the abilities to act and interact successfully to improve health, and to util- ize different forms of communication to obtain, provide, and apply relevant health information. People with bet- ter interactive health literacy skills are more likely to be proactive agents in everyday health-related actions.",
+      "type": "implicit"
+    },
+    "functional health literacy": {
+      "definition": "the ability to obtain, understand, and use factual health information.",
+      "context": "We base our work on the de- scription of these forms by Smith et al. (2013): Functional health literacy includes the ability to ob- tain, understand, and use factual health information. A secondary outcome of functional health literacy is that people know more about health issues.",
+      "type": "implicit"
+    },
+    "critical health literacy": {
+      "definition": "the ability to critically assess and reflect on health information and advice.",
+      "context": "People with bet- ter interactive health literacy skills are more likely to be proactive agents in everyday health-related actions. Critical health literacy includes the ability to critic- ally assess and reflect on health information and advice. This includes understanding and recognizing the wider social determinants of health.",
+      "type": "implicit"
+    },
+    "conceptual framework": {
+      "definition": "a theoretical structure that explained key factors, variables, ideas, and presumed relationships of the concept.",
+      "context": "If a publication referred to an existing definition of nutrition literacy or food lit- eracy, we included only the definition from the original source. We defined a conceptual framework as a theor- etical structure that explained key factors, variables, ideas, and presumed relationships of the concept. (Miles and Hubermann, 1994). If publications contained a def- inition and a more detailed description of the associated competencies of nutrition or food literacy, and identified factors that influence the development of nutrition liter- acy or food literacy, or described the consequences of acquiring these competencies, we considered the publi- cation to have a conceptual framework.",
+      "type": "explicit"
+    },
+    "nutrition literacy": {
+      "definition": "individual’s capacity to obtain, process, and understand basic nutrition information necessary for making appropriate nutrition decisions.",
+      "context": "Four of the six defin- itions of nutrition literacy (Blitstein and Evans, 2006; Neuhauser et al., 2007; Silk et al., 2008; Zoellner et al., 2009) adapted the U.S. Department of Health and Human Services definition of health literacy (National Research Council, 2004) by replacing the term ‘health’ with ‘nutrition’. They defined nutrition literacy as an in- dividual’s capacity to obtain, process, and understand basic nutrition information necessary for making appro- priate nutrition decisions. The remaining two publications (Guttersrud et al., 2014; Watson et al., 2013) referred to either Nutbeam’s (2000) or Peerson and Saunders (2009) definition of health literacy.",
+      "type": "explicit"
+    }
+  },
+  "frai-06-1225093": {
+    "abstractive rationalization": {
+      "definition": "generating a novel explanation",
+      "context": "The term rationalization is interchangeable with explanation or justification. Rationalization has rarely been formally defined in the context of NLP. Therefore, we propose the following definition: Rationalization justifies a model’s output by providing a natural language explanation. This is accomplished by either extracting text fragments from the input (extractive rationalization) or by generating a novel explanation (abstractive rationalization).",
+      "type": "explicit"
+    },
+    "extractive rationalization": {
+      "definition": "extracting text fragments from the input",
+      "context": "The term rationalization is interchangeable with explanation or justification. Rationalization has rarely been formally defined in the context of NLP. Therefore, we propose the following definition: Rationalization justifies a model’s output by providing a natural language explanation. This is accomplished by either extracting text fragments from the input (extractive rationalization) or by generating a novel explanation (abstractive rationalization).",
+      "type": "explicit"
+    },
+    "Interpretability": {
+      "definition": "Interpretability aims at developing tools to understand and investigate the behavior of an AI system.",
+      "context": "Interpretability “aims at developing tools to understand and investigate the behavior of an AI system” (Thayaparan et al., 2020). Doshi-Velez and Kim (2017) augments this definition by adding that interpretability tools allow us to “explain or to present in understandable terms to a human” what the AI system is performing.",
+      "type": "implicit"
+    },
+    "Rationalization": {
+      "definition": "justifies a model’s output by providing a natural language explanation.",
+      "context": "The term rationalization is interchangeable with explanation or justification. Rationalization has rarely been formally defined in the context of NLP. Therefore, we propose the following definition: Rationalization justifies a model’s output by providing a natural language explanation. This is accomplished by either extracting text fragments from the input (extractive rationalization) or by generating a novel explanation (abstractive rationalization).",
+      "type": "explicit"
+    },
+    "Black-box Model": {
+      "definition": "A machine-learning obscure model, whose [architecture] internals are either unknown to the observer, or they are known but uninterpretable by humans",
+      "context": "Given in a Table",
+      "type": "explicit"
+    },
+    "Explainability": {
+      "definition": "the aim of explainability is to design inherently interpretable models capable of performing transparent inference through the generation of an explanation for the final prediction.",
+      "context": "There is no consensus on the nature of explanations since they are entirely task-dependent, and AI embraces a wide variety of tasks (Miller, 2019a). We treat explainability as a specialization of interpretability where the aim of explainability is to design inherently interpretable models capable of performing transparent inference through the generation of an explanation for the final prediction (Thayaparan et al., 2020). In this survey, we focus on black-box explainability, specifically as the outcome explanation problem.",
+      "type": "explicit"
+    },
+    "interpretable": {
+      "definition": "i.e., allowing humans to understand the internals of a model",
+      "context": "The bar for the ethical standards and the accountability required to maintain NLP systems continue to increase as these systems become more opaque with increasingly complex networks and algorithms. There has been significant research focus on enabling models to be more interpretable, i.e., allowing humans to understand the internals of a model (Gilpin et al., 2018). However, due to the lack of completeness, interpretability alone is not enough for humans to trust black-box models.",
+      "type": "explicit"
+    },
+    "NLP Assurance": {
+      "definition": "A process that is applied at all stages of the NLP development lifecycle to ensure that all outcomes are valid, verified, trustworthy, and explainable to a non-expert, ethical in the context of its deployment, unbiased in its learning, and fair to its users.",
+      "context": "A process that is applied at all stages of the NLP development lifecycle to ensure that all outcomes are valid, verified, trustworthy, and explainable to a non-expert, ethical in the context of its deployment, unbiased in its learning, and fair to its users. This definition is adopted from Batarseh et al. (2021) and modified to fit the scope of the NLP domain.",
+      "type": "explicit"
+    },
+    "Completeness": {
+      "definition": "The ability to accurately describe the operations of a system that allows humans to anticipate its behavior better.",
+      "context": "However, due to the lack of completeness, interpretability alone is not enough for humans to trust black-box models. Completeness is the ability to accurately describe the operations of a system that allows humans to anticipate its behavior better. Gilpin et al. (2018) argue that explainability improves on interpretability as a technique to describe the model’s decision-making process of arriving at a prediction and the ability to be verified and audited.",
+      "type": "explicit"
+    }
+  },
+  "icomputing.0124": {
+    "task planning": {
+      "definition": "a complex process that involves reasoning, decision-making, and the coordina- tion of various actions to achieve a specific goal.",
+      "context": "However, the potential of LLMs extends beyond simple language understanding and generation. One emerging application that has garnered considerable attention is the utilization of LLMs in task planning—a complex process that involves reasoning, decision-making, and the coordina- tion of various actions to achieve a specific goal. Traditional task planning approaches rely on predefined rules, constraints, and domain-specific knowledge, often requiring a great deal of expert input and manual configuration.",
+      "type": "explicit"
+    }
+  },
+  "s10462-022-10338-7": {
+    "composition of a narrative": {
+      "definition": "is given by the entities participating in the story, the events in which they are agents, and the temporal data that defines the sequence of narrated events.",
+      "context": "Much of this content is communicated using natural language containing narratives that refer to stories involving multiple actors and events, occurring in varied locations according to a timeline. The composition of a narrative is given by the entities participating in the story, the events in which they are agents, and the temporal data that defines the sequence of narrated events. In this sense, as stated by Toolan (2013), a narra- tive can be seen as a perceived sequence of non-randomly connected events, a sequence of interconnected facts that are observed over a period of time involving basic elements such as organizations, persons, locations or time.",
+      "type": "implicit"
+    },
+    "Computational Narratology": {
+      "definition": "Its purpose is to study narrative from the computational and information processing point of view focusing on the algorith- mic processes involved in creating and interpreting narratives, and the modeling of nar- rative structure in terms of formal, computable representations",
+      "context": "The study of narratives from the computational perspective is carried out through a study area called Computational Narratology (Mani 2014). Its purpose is to study narrative from the computational and information processing point of view focusing on the algorith- mic processes involved in creating and interpreting narratives, and the modeling of nar- rative structure in terms of formal, computable representations (Mani 2012). In parallel, computational narrative extraction, or simply Narrative Extraction can be defined as the use of computational tools for identifying, linking and visualizing narrative elements from textual sources.",
+      "type": "explicit"
+    },
+    "narrative extraction": {
+      "definition": "the use of computational tools for identifying, linking and visualizing narrative elements from textual sources.",
+      "context": "Its purpose is to study narrative from the computational and information processing point of view focusing on the algorith- mic processes involved in creating and interpreting narratives, and the modeling of nar- rative structure in terms of formal, computable representations (Mani 2012). In parallel, computational narrative extraction, or simply Narrative Extraction can be defined as the use of computational tools for identifying, linking and visualizing narrative elements from textual sources. A closely related term is Computational Narrative Understanding (Piper et al. 2021), which broadens the perspective to social, personal and cultural dimensions.",
+      "type": "explicit"
+    },
+    "event argument": {
+      "definition": "a reference to an entity, a temporal expression, or a value that works as an attribute or individual with a particular role in an event",
+      "context": "Other works consider the case where multiple events appear in the same sentence (Balali et al. 2020). Following ACE (LDC 2005) terminology, we consider an event structure based on four subtasks: (1) Event mention (i.e., a sentence or expression that explains an event, including a cause and multiple arguments); (2) Event trigger (i.e., the key term that demonstrates the occurrence of an event most clearly, usually a verb or a noun); (3) Event argument (i.e., a reference to an entity, a temporal expression, or a value that works as an attribute or individual with a particular role in an event); and (4) Argu- ment role (i.e., the link between an argument and the event in which it is involved). In its annotation guidelines for events, ACE 2005 (LDC 2005) defined 8 event types and 33 sub- types, where each event subtype corresponds to a set of argument roles. Figure 6 illustrates the event extraction process for our running example.",
+      "type": "explicit"
+    },
+    "event mention": {
+      "definition": "a sentence or expression that explains an event, including a cause and multiple arguments.",
+      "context": "Other works consider the case where multiple events appear in the same sentence (Balali et al. 2020). Following ACE (LDC 2005) terminology, we consider an event structure based on four subtasks: (1) Event mention (i.e., a sentence or expression that explains an event, including a cause and multiple arguments); (2) Event trigger (i.e., the key term that demonstrates the occurrence of an event most clearly, usually a verb or a noun); (3) Event argument (i.e., a reference to an entity, a temporal expression, or a value that works as an attribute or individual with a particular role in an event); and (4) Argu- ment role (i.e., the link between an argument and the event in which it is involved). In its annotation guidelines for events, ACE 2005 (LDC 2005) defined 8 event types and 33 sub- types, where each event subtype corresponds to a set of argument roles. Figure 6 illustrates the event extraction process for our running example.",
+      "type": "explicit"
+    },
+    "event trigger": {
+      "definition": "the key term that demonstrates the occurrence of an event most clearly, usually a verb or a noun.",
+      "context": "Other works consider the case where multiple events appear in the same sentence (Balali et al. 2020). Following ACE (LDC 2005) terminology, we consider an event structure based on four subtasks: (1) Event mention (i.e., a sentence or expression that explains an event, including a cause and multiple arguments); (2) Event trigger (i.e., the key term that demonstrates the occurrence of an event most clearly, usually a verb or a noun); (3) Event argument (i.e., a reference to an entity, a temporal expression, or a value that works as an attribute or individual with a particular role in an event); and (4) Argu- ment role (i.e., the link between an argument and the event in which it is involved). In its annotation guidelines for events, ACE 2005 (LDC 2005) defined 8 event types and 33 sub- types, where each event subtype corresponds to a set of argument roles. Figure 6 illustrates the event extraction process for our running example.",
+      "type": "explicit"
+    },
+    "argument role": {
+      "definition": "the link between an argument and the event in which it is involved.",
+      "context": "Other works consider the case where multiple events appear in the same sentence (Balali et al. 2020). Following ACE (LDC 2005) terminology, we consider an event structure based on four subtasks: (1) Event mention (i.e., a sentence or expression that explains an event, including a cause and multiple arguments); (2) Event trigger (i.e., the key term that demonstrates the occurrence of an event most clearly, usually a verb or a noun); (3) Event argument (i.e., a reference to an entity, a temporal expression, or a value that works as an attribute or individual with a particular role in an event); and (4) Argu- ment role (i.e., the link between an argument and the event in which it is involved). In its annotation guidelines for events, ACE 2005 (LDC 2005) defined 8 event types and 33 sub- types, where each event subtype corresponds to a set of argument roles. Figure 6 illustrates the event extraction process for our running example.",
+      "type": "explicit"
+    },
+    "ontologies": {
+      "definition": "formal and explicit specifications of a shared conceptualization that can serve as a modeling basis for different purposes of representation.",
+      "context": "Another way is to relate the events of the narrative with entities from a knowl- edge base, which stores data about entities using ontological schemes (Ehrlinger and Wöß 2016). According to Gruber (1993), ontologies are formal and explicit specifications of a shared conceptualization that can serve as a modeling basis for different purposes of repre- sentation. Representational primitives defined by ontologies are typically classes (or sets), attributes (or properties), and relationships (or relations among class members) (Gruber 2008).",
+      "type": "explicit"
+    },
+    "discourse": {
+      "definition": "The expression, how the content is communicated, for instance, by word (verbal language: oral and written), image (visual language), representation (theat- rical language), etc.",
+      "context": "The events are linked by causality relations, and compose a story with an initial situation, followed by a complication, reactions, resolution and final situation. From a structuralist theory point of view, narratives can be defined, as stated by Chatman (1980), as structures consisting of two parts: (1) a story, the content or chain of events (actions, happenings), plus what may be called the existents (characters, items of setting); and (2) a discourse, that is, the expression, how the content is communicated, for instance, by word (verbal language: oral and written), image (visual language), representation (theat- rical language), etc. The definition of what a narrative is has been dissected by several other authors over the years, reflecting the difficulty in reaching a broad consensus within the community.",
+      "type": "explicit"
+    },
+    "story": {
+      "definition": "the content or chain of events (actions, happenings), plus what may be called the existents (characters, items of setting)",
+      "context": "The events are linked by causality relations, and compose a story with an initial situation, followed by a complication, reactions, resolution and final situation. From a structuralist theory point of view, narratives can be defined, as stated by Chatman (1980), as structures consisting of two parts: (1) a story, the content or chain of events (actions, happenings), plus what may be called the existents (characters, items of setting); and (2) a discourse, that is, the expression, how the content is communicated, for instance, by word (verbal language: oral and written), image (visual language), representation (theat- rical language), etc. The definition of what a narrative is has been dissected by several other authors over the years, reflecting the difficulty in reaching a broad consensus within the community.",
+      "type": "implicit"
+    },
+    "event": {
+      "definition": "something significant happening at a specific time and place with consequences.",
+      "context": "Finding the events mentioned in the text is an essential step towards the extraction of nar- ratives from a pre-processed text. Formally, an event may be defined (Allan et al. 1998) as something significant happening at a specific time and place with consequences. In the real world, this can be an explosion caused by a bomb, the birth of an heir, or the death of a famous person.",
+      "type": "explicit"
+    }
+  },
+  "s10816-016-9274-2": {
+    "Quality Assurance": {
+      "definition": "policies, procedures, manuals, standards, and systems, arranged with the goal of ensuring and continually improving the quality of products or services and consumers’ satisfaction with them",
+      "context": "In the USA, standards for quality are found in ISO9000 and ISO9001, and ANSI/ASQC Q91-87 through Q94-87, while the Canadian equivalents are CSA Z299.0 and CSA Z299.1/.4, and those in the United Kingdom are BS 4891 and BS 5750. Briefly, QA involves policies, procedures, manuals, standards, and systems, arranged with the goal of ensuring and continually improving the quality of products or services and consumers’ satisfaction with them. Unfortunately for archaeologists, most of the literature on Quality Assurance and Management concerns manufacturing and service industries.",
+      "type": "implicit"
+    }
+  },
+  "s40537-025-01077-x": {
+    "Lemmatization": {
+      "definition": "Transforming various forms of vocabulary into their base forms, which are lemmas or stems",
+      "context": "Tokenization: Segmenting into the smallest meaningful units, such as words or phrases. • Lemmatization: Transforming various forms of vocabulary into their base forms, which are lemmas or stems. • PoS tagging: Assigning a PoS tag to each word or token in the texts to indicate the word’s grammatical role and lexical category within the sentence. This task is not mandatory in preprocessing.",
+      "type": "implicit"
+    },
+    "Tokenization": {
+      "definition": "Segmenting into the smallest meaningful units, such as words or phrases",
+      "context": "• Cleaning: Removing irrelevant content from the texts, such as stopwords, special characters, HTML tags, numbers, and punctuation marks. • Tokenization: Segmenting into the smallest meaningful units, such as words or phrases. • Lemmatization: Transforming various forms of vocabulary into their base forms, which are lemmas or stems.",
+      "type": "implicit"
+    },
+    "terminology": {
+      "definition": "a concept reference system within a specialized field",
+      "context": "For example, the authors in propose to separate the concept of the terminology from the common word, marking the beginning of terminology research. Wüster defines terminology as “a concept reference system within a specialized field”. Based on Wüster’s terminology theory, Wright et al. argue that terminology should be organized by subject and examined for its logical, holistic, part-whole, and associative relationships.",
+      "type": "explicit"
+    },
+    "Cleaning": {
+      "definition": "Removing irrelevant content from the texts, such as stopwords, special characters, HTML tags, numbers, and punctuation marks",
+      "context": "During the preprocessing stage, the most common tasks include: • Cleaning: Removing irrelevant content from the texts, such as stopwords, special characters, HTML tags, numbers, and punctuation marks. • Tokenization: Segmenting into the smallest meaningful units, such as words or phrases.",
+      "type": "implicit"
+    },
+    "domain": {
+      "definition": "a realm of professional knowledge",
+      "context": "These descriptions provide some concepts about the domain but do not explicitly define the boundaries of the domain. ISO delineates a domain as a realm of professional knowledge, and the delineation of its boundaries is established with a focus on purpose-related considerations. ISO provides a definition of a domain as a specialized area of professional knowledge.",
+      "type": "explicit"
+    }
+  }
+}
