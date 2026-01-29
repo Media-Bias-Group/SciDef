@@ -97,7 +97,6 @@ def extract_text_from_grobid(
     tree = etree.parse(file_path)
     root = tree.getroot()
 
-    # todo check if legal
     # if root.tag != "{http://www.tei-c.org/ns/1.0}TEI":
     #    raise TextExtractionError(f"Not a TEI XML file: {file_path}")
 
@@ -115,9 +114,6 @@ def extract_text_from_grobid(
 
 
 def _chunk_body(body, chunk_mode):
-    """
-    TODO add subsections (I don't think they exist though)
-    """
     chunk = []
 
     if chunk_mode == ChunkMode.SENTENCE:

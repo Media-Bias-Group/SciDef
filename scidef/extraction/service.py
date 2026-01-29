@@ -115,7 +115,6 @@ class ExtractionService:
                 ]
                 definitions.extend(merged_json)
 
-            # TODO wrap in class?
             if paper_metadata:
                 return {paper_metadata.paper_id: definitions}
             else:
@@ -188,7 +187,6 @@ class ExtractionService:
         error_message: str,
     ) -> ExtractionResult:
         """Create a failed extraction result."""
-        # TODO update
         result = ExtractionResult(
             paper_id=paper_id,
             mode=ExtractionPrompt.EXTRACTIVE,

@@ -40,11 +40,6 @@ To support user-friendly usage, we provide scripts for running the SciDef pipeli
 
 The [README.md](scripts/README.md) explains how to use them.
 
-The following scripts are provided:
-- [Extraction Script](scripts/benchmark.py)
-- Validation Script(TODO)
-- Metric Evaluation Script(TODO)
-
 
 SciDef uses [uv](https://github.com/astral-sh/uv) for the package and enviroment management.
 

@@ -221,7 +221,6 @@ def main():
         return
 
     # ensure name is right in env for cache
-    # TODO: ensure compatibility with non-dspy model_names if provided with `hosted_vllm` prefix or similar
     cleaned_model_name = "/".join(args.llm_model_name.split("/")[1:])
     os.environ["LLM_MODEL_NAME"] = cleaned_model_name
     os.environ["VLLM_MODEL_NAME"] = cleaned_model_name

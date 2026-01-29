@@ -370,7 +370,7 @@ async def evaluate_cosine_similarity(
     embedding_client: Optional[EmbeddingClient],
     pairs: List[Tuple[str, str, float]],
     dataset_name: str,
-    metric: MeasureMethod = MeasureMethod.PEARSON,  # TODO make it possible to do multiple measures
+    metric: MeasureMethod = MeasureMethod.PEARSON,
     threshold: Optional[Union[float, List[float]]] = None,
     ground_truth_threshold: Optional[Union[float, List[float]]] = None,
 ) -> BenchmarkResult:

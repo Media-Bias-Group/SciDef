@@ -168,7 +168,6 @@ class NLIClient(CacheModel):
         score_mode: Union[List[ScoreMode], ScoreMode] = ScoreMode.HMEAN,
     ) -> NLIResult:
         try:
-            # +3 is for special tokens, just guess TODO: improve
             if (
                 len(human_definition) + len(model_definition) + 3
                 > self.max_length

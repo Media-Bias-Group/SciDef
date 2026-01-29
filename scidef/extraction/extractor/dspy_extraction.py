@@ -181,7 +181,6 @@ class DSPyPaperExtractor(dspy.Module):
             type_ = p["type"]
             by_term[t].append([d, ctx, type_])
 
-        # TODO: pick the "best" definition per term?
         merged = []
         for t, defs in by_term.items():
             merged.append(
