@@ -4,7 +4,7 @@ DISCLAIMER: This documentation was auto-generated with AI assistance. Please
 verify commands, paths, and settings in your environment before relying on it.
 
 This guide explains how to create a custom DSPy extractor and train it with
-DefExtra ground truth.
+[DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) ground truth.
 
 ## Where the current DSPy extractor lives
 
@@ -55,13 +55,82 @@ class MyExtractor(dspy.Module):
 - Add the class to `scripts/extract_definitions.py` in `EXTRACTOR_CLASSES`.
 - (Optional) Add any DSPy program load path or two-step gating flags.
 
+## Providing your own ground truth
+
+SciDef's default training/evaluation expects a JSON mapping:
+```json
+{
+  "<paper_id>": {
+    "<term>": {
+      "definition": "...",
+      "context": "...",
+      "type": "explicit"
+    }
+  }
+}
+```
+
+If you keep this schema, you can train/evaluate with
+`scripts/dspy_train.py` and `scripts/evaluate_extraction.py` unchanged.
+
+For a different task (e.g., "sentences about politicians"), update:
+- The DSPy signature and output schema
+- The dataset loader in `scidef/extraction/utils.py` (or create a new loader)
+- The evaluation function in `scidef/evaluation/utils.py` (or create a new one)
+
+### Example: "sentences about politicians"
+
+**Goal**: return all sentences in a paper that mention politicians.
+
+1) Define a new signature and module:
+```python
+class PoliticianSentenceSig(dspy.Signature):
+    section = dspy.InputField()
+    sentences = dspy.OutputField(desc="List of sentences mentioning politicians.")
+
+class PoliticianSentenceExtractor(dspy.Module):
+    def __init__(self):
+        super().__init__()
+        self.step = dspy.ChainOfThought(PoliticianSentenceSig)
+
+    def forward(self, sections):
+        all_sentences = []
+        for sec in sections:
+            out = self.step(section=sec)
+            all_sentences.extend(out.sentences)
+        return dspy.Prediction(
+            merged_json=json.dumps(all_sentences, ensure_ascii=False),
+        )
+```
+
+2) Create ground truth JSON:
+```json
+{
+  "<paper_id>": {
+    "sentences": [
+      "Senator X said ...",
+      "The prime minister ...",
+      "... etc ..."
+    ]
+  }
+}
+```
+
+3) Replace `load_ground_truth()` with a task-specific loader that produces
+`dspy.Example(paper_id=..., sections=..., ground_truth_sentences=[...])`.
+
+4) Replace `evaluate_extraction()` with a scoring function (e.g., F1 over
+normalized sentences, or semantic matching with NLI/embeddings).
+
+This keeps the pipeline structure but swaps the task-specific pieces.
+
 ## Training a DSPy extractor
 
 The training entrypoint is:
 `scripts/dspy_train.py`
 
 Inputs:
-- Ground-truth JSON (DefExtra hydrated -> SciDef JSON)
+- Ground-truth JSON ([DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) hydrated -> SciDef JSON)
 - GROBID TEI XML for each paper
 
 Example (smaller, faster run):

@@ -4,11 +4,12 @@ DISCLAIMER: This documentation was auto-generated with AI assistance. Please
 verify commands, paths, and settings in your environment before relying on it.
 
 This guide shows how SciDef connects to the two released dataset repos:
-DefExtra (definition extraction) and DefSim (definition similarity).
+[DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) (definition extraction) and DefSim (definition similarity).
 
 ## DefExtra (hydrated) -> SciDef ground truth
 
 SciDef expects ground truth in JSON:
+
 ```
 {
   "<paper_id>": {
@@ -17,12 +18,13 @@ SciDef expects ground truth in JSON:
 }
 ```
 
-The DefExtra release ships a legal CSV with markers. You must hydrate it from
-your own PDFs using the DefExtra scripts.
+The [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) release ships a legal CSV with markers. You must hydrate it from
+your own PDFs using the [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) scripts.
 
 ### 1) Hydrate DefExtra (DefExtra repo)
 
-From the DefExtra repo:
+From the [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) repo:
+
 ```bash
 uv run python scripts/hydrate_defextra.py \
   --legal-csv data/defextra_legal.csv \
@@ -33,6 +35,7 @@ uv run python scripts/hydrate_defextra.py \
 ```
 
 Notes:
+
 - `grobid_out` contains TEI XML files used by SciDef.
 - The output TEI naming is `<paper_id>.grobid.tei.xml` (no `paper_` prefix).
   SciDef accepts both `<paper_id>.grobid.tei.xml` and
@@ -41,6 +44,7 @@ Notes:
 ### 2) Convert hydrated CSV to SciDef JSON (SciDef repo)
 
 Use the conversion utility:
+
 ```bash
 uv run python scripts/defextra_csv_to_json.py \
   --csv /path/to/defextra_hydrated.csv \
@@ -48,6 +52,7 @@ uv run python scripts/defextra_csv_to_json.py \
 ```
 
 For a small sample:
+
 ```bash
 uv run python scripts/defextra_csv_to_json.py \
   --csv /path/to/defextra_hydrated.csv \
@@ -58,6 +63,7 @@ uv run python scripts/defextra_csv_to_json.py \
 ### 3) Run extraction and evaluation (SciDef repo)
 
 Example sample run against a local vLLM server:
+
 ```bash
 export LLM_PROVIDER=vllm
 export VLLM_BASE_URL=http://localhost:8000/v1
@@ -77,6 +83,7 @@ uv run python scripts/extract_definitions.py \
 ```
 
 Evaluate the extracted results with NLI:
+
 ```bash
 WANDB_MODE=offline uv run python scripts/evaluate_extraction.py \
   --ground-truth-path /path/to/defextra_hydrated_sample.json \
@@ -89,6 +96,7 @@ WANDB_MODE=offline uv run python scripts/evaluate_extraction.py \
 
 DefSim is a separate dataset for definition similarity with short excerpts.
 SciDef can evaluate similarity via:
+
 - `scripts/benchmark_nli.py` (NLI models)
 - `scripts/benchmark_embedding.py` (embedding models)
 - `scripts/benchmark_judge.py` (LLM judges)

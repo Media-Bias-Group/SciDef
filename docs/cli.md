@@ -18,6 +18,7 @@ export VLLM_API_KEY=EMPTY
 ```
 
 Notes:
+
 - NLI models are loaded with `transformers` on first run and may download
   weights from Hugging Face.
 - Weights and Biases is used for logging. For offline runs:
@@ -28,6 +29,7 @@ All commands below assume you run them from the SciDef repo root.
 ## Scripts
 
 ### `scripts/pdf_to_grobid.py`
+
 Convert a directory of PDFs into GROBID TEI XML files (requires a running
 GROBID server).
 
@@ -39,9 +41,11 @@ uv run python scripts/pdf_to_grobid.py \
 ```
 
 ### `scripts/extract_definitions.py`
+
 Run the extraction pipeline over GROBID TEI XML files.
 
 Key flags:
+
 - `--input-dir` one or more TEI folders
 - `--extractors` extraction strategies (DSPy and non-DSPy)
 - `--chunk_modes` sentence/paragraph/section/three_sentence
@@ -51,6 +55,7 @@ Key flags:
 - `--gt_path` optional JSON ground-truth to filter to known papers
 
 Example (small sample):
+
 ```bash
 uv run python scripts/extract_definitions.py \
   --input-dir /path/to/grobid_out \
@@ -64,10 +69,12 @@ uv run python scripts/extract_definitions.py \
 ```
 
 ### `scripts/evaluate_extraction.py`
+
 Evaluate extracted definitions using an NLI model.
 
 Key flags:
-- `--ground-truth-path` SciDef ground-truth JSON (see DefExtra integration)
+
+- `--ground-truth-path` SciDef ground-truth JSON (see [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) integration)
 - `--extractions-dir` GROBID TEI folders
 - `--extracted-definitions-path` evaluate an existing extraction JSON
 - `--nli-model-name` HF NLI model
@@ -75,6 +82,7 @@ Key flags:
 - `--skip-train/--skip-dev/--skip-test` to reduce runtime
 
 Example (evaluate pre-extracted results on test split only):
+
 ```bash
 WANDB_MODE=offline uv run python scripts/evaluate_extraction.py \
   --ground-truth-path /path/to/defextra_hydrated.json \
@@ -84,10 +92,12 @@ WANDB_MODE=offline uv run python scripts/evaluate_extraction.py \
 ```
 
 ### `scripts/dspy_train.py`
-Train or optimize a DSPy extractor using DefExtra ground truth and NLI-based
+
+Train or optimize a DSPy extractor using [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) ground truth and NLI-based
 scoring.
 
 Key flags:
+
 - `--ground-truth-path` SciDef ground-truth JSON
 - `--extractions-dir` GROBID TEI folders
 - `--dspy-optimizer` (miprov2, bootstrap, bootstrap_random)
@@ -97,6 +107,7 @@ Note: DSPy via LiteLLM expects vLLM model ids to be prefixed with
 `hosted_vllm/` (e.g., `hosted_vllm/openai/gpt-oss-20b`).
 
 Example (small, faster optimizer):
+
 ```bash
 WANDB_MODE=offline uv run python scripts/dspy_train.py \
   --ground-truth-path /path/to/defextra_hydrated.json \
@@ -108,7 +119,8 @@ WANDB_MODE=offline uv run python scripts/dspy_train.py \
 ```
 
 ### `scripts/defextra_csv_to_json.py`
-Convert a hydrated DefExtra CSV to SciDef ground-truth JSON.
+
+Convert a hydrated [DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) CSV to SciDef ground-truth JSON.
 
 ```bash
 uv run python scripts/defextra_csv_to_json.py \
@@ -118,6 +130,7 @@ uv run python scripts/defextra_csv_to_json.py \
 ```
 
 ### Benchmarks
+
 - `scripts/benchmark_embedding.py`
 - `scripts/benchmark_judge.py`
 - `scripts/benchmark_nli.py`
