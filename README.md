@@ -2,6 +2,13 @@
 
 ![SciDef - Workflow](img/scidef_workflow.png)
 
+<p align="center">
+  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-soon-b31b1b" alt="arXiv soon"></a>
+  <a href="https://sigir.org/"><img src="https://img.shields.io/badge/SIGIR%20%2F%20ACM-under%20review-0054a6" alt="SIGIR / ACM under review"></a>
+  <a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra"><img src="https://img.shields.io/badge/HF%20Dataset-DefExtra-ff9d00" alt="HF Dataset DefExtra"></a>
+  <a href="https://huggingface.co/datasets/mediabiasgroup/DefSim"><img src="https://img.shields.io/badge/HF%20Dataset-DefSim-ff9d00" alt="HF Dataset DefSim"></a>
+</p>
+
 ## Overview
 
 With the rapid growth of publications, identifying definitions relevant to a given keyword has become increasingly difficult.
@@ -59,6 +66,7 @@ Please verify commands and settings in your environment.
 - [`docs/defextra_integration.md`](docs/defextra_integration.md): DefExtra/DefSim integration
 - [`docs/dspy_custom_extractor.md`](docs/dspy_custom_extractor.md): Custom DSPy extractor + training
 - [`scripts/README.md`](scripts/README.md): script-by-script usage details
+- [`APPENDIX.md`](APPENDIX.md): supplementary figures and tables
 
 ### Example
 
