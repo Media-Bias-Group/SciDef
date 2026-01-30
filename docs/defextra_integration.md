@@ -10,7 +10,7 @@ This guide shows how SciDef connects to the two released dataset repos:
 
 SciDef expects ground truth in JSON:
 
-```
+```json
 {
   "<paper_id>": {
     "<term>": {"definition": "...", "context": "...", "type": "explicit"}

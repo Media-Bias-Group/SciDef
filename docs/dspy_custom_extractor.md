@@ -12,6 +12,7 @@ The default DSPy extractor is in:
 `scidef/extraction/extractor/dspy_extraction.py`
 
 Key components:
+
 - `ExtractPairsSig` and `DetermineIfDefinitionSig` (DSPy signatures)
 - `ExtractFromSection` (section-level module)
 - `DSPyPaperExtractor` (paper-level module, returns `merged_json`)
@@ -28,6 +29,7 @@ The `DSPyPaperExtractor` returns a JSON list of items with keys:
 `dspy.Prediction` with `merged_json` containing a JSON list of term records.
 
 Minimal pattern:
+
 ```python
 import json
 import dspy
@@ -52,12 +54,14 @@ class MyExtractor(dspy.Module):
 ```
 
 3) Wire it into the CLI:
+
 - Add the class to `scripts/extract_definitions.py` in `EXTRACTOR_CLASSES`.
 - (Optional) Add any DSPy program load path or two-step gating flags.
 
 ## Providing your own ground truth
 
 SciDef's default training/evaluation expects a JSON mapping:
+
 ```json
 {
   "<paper_id>": {
@@ -74,6 +78,7 @@ If you keep this schema, you can train/evaluate with
 `scripts/dspy_train.py` and `scripts/evaluate_extraction.py` unchanged.
 
 For a different task (e.g., "sentences about politicians"), update:
+
 - The DSPy signature and output schema
 - The dataset loader in `scidef/extraction/utils.py` (or create a new loader)
 - The evaluation function in `scidef/evaluation/utils.py` (or create a new one)
@@ -83,6 +88,7 @@ For a different task (e.g., "sentences about politicians"), update:
 **Goal**: return all sentences in a paper that mention politicians.
 
 1) Define a new signature and module:
+
 ```python
 class PoliticianSentenceSig(dspy.Signature):
     section = dspy.InputField()
@@ -103,7 +109,8 @@ class PoliticianSentenceExtractor(dspy.Module):
         )
 ```
 
-2) Create ground truth JSON:
+1) Create ground truth JSON:
+
 ```json
 {
   "<paper_id>": {
@@ -116,10 +123,10 @@ class PoliticianSentenceExtractor(dspy.Module):
 }
 ```
 
-3) Replace `load_ground_truth()` with a task-specific loader that produces
+1) Replace `load_ground_truth()` with a task-specific loader that produces
 `dspy.Example(paper_id=..., sections=..., ground_truth_sentences=[...])`.
 
-4) Replace `evaluate_extraction()` with a scoring function (e.g., F1 over
+1) Replace `evaluate_extraction()` with a scoring function (e.g., F1 over
 normalized sentences, or semantic matching with NLI/embeddings).
 
 This keeps the pipeline structure but swaps the task-specific pieces.
@@ -130,10 +137,12 @@ The training entrypoint is:
 `scripts/dspy_train.py`
 
 Inputs:
+
 - Ground-truth JSON ([DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) hydrated -> SciDef JSON)
 - GROBID TEI XML for each paper
 
 Example (smaller, faster run):
+
 ```bash
 export LLM_PROVIDER=vllm
 export VLLM_BASE_URL=http://localhost:8000/v1
@@ -151,12 +160,14 @@ uv run python scripts/dspy_train.py \
 ```
 
 Outputs:
+
 - Compiled DSPy program JSON in `artifacts/`
 - Offline W&B logs if `WANDB_MODE=offline`
 
 ## Using a compiled DSPy program
 
 ### Extraction CLI
+
 ```bash
 uv run python scripts/extract_definitions.py \
   --input-dir /path/to/grobid_out \
@@ -168,6 +179,7 @@ uv run python scripts/extract_definitions.py \
 ```
 
 ### Evaluation CLI
+
 ```bash
 WANDB_MODE=offline uv run python scripts/evaluate_extraction.py \
   --ground-truth-path /path/to/defextra_hydrated.json \
