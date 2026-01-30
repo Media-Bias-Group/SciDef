@@ -1,6 +1,6 @@
 [project]
 name = "SciDef"
-version = "0.1.0"
+version = "1.0.0"
 description = "**SciDef** provides resources to support research on **definition extraction and definition similarity** from scientific literature."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
