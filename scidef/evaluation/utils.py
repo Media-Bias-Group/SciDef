@@ -119,16 +119,22 @@ def evaluate_and_log(
             else:
                 # Use pre-loaded extracted results
                 assert extracted_definitions is not None
-                paper_filename = (
-                    f"paper_{paper_id}.grobid.tei"
-                    if "/" not in paper_id
-                    else f"paper_{paper_id.split('/')[-1]}.grobid.tei"
-                )
-                paper_results = extracted_definitions.get(paper_filename, [])
+                base_id = paper_id.split("/")[-1]
+                paper_keys = [
+                    f"paper_{base_id}.grobid.tei",
+                    f"{base_id}.grobid.tei",
+                ]
+                paper_results = None
+                for key in paper_keys:
+                    if key in extracted_definitions:
+                        paper_results = extracted_definitions.get(key)
+                        break
                 if not paper_results:
                     logger.warning(
-                        f"No extracted definitions found for paper {paper_id} (filename: {paper_filename})",
+                        "No extracted definitions found for paper "
+                        f"{paper_id} (keys tried: {paper_keys})",
                     )
+                paper_results = list(paper_results or [])
 
                 # lowercase keys for consistency with DSPy predictions
                 pred = [

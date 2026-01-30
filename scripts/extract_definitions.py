@@ -11,7 +11,7 @@ from typing import Any, List, Optional
 
 import dspy
 
-from config import Config
+from _bootstrap import load_config_module
 from scidef.extraction.dataclass import ChunkMode
 from scidef.extraction.extractor import (
     MultiStepExtractor,
@@ -26,6 +26,7 @@ from scidef.model.dataclass import ExtractionResult, PaperMetadata
 from scidef.utils import get_custom_colored_logger
 
 logger = get_custom_colored_logger(__name__)
+Config = load_config_module().Config
 
 
 EXTRACTOR_CLASSES = {
@@ -35,6 +36,15 @@ EXTRACTOR_CLASSES = {
     "OneStepFewShotExtractor": OnesStepFewShotExtractor,
     "MultiStepFewShotExtractor": MultiStepFewShotExtractor,
 }
+
+
+def candidate_grobid_paths(grobid_dir: Path, paper_id: str) -> list[Path]:
+    """Return GROBID TEI candidate paths for a given paper id."""
+    base = paper_id.split("/")[-1]
+    return [
+        grobid_dir / f"paper_{base}.grobid.tei.xml",
+        grobid_dir / f"{base}.grobid.tei.xml",
+    ]
 
 
 def sanitize_string(s: str) -> str:
@@ -280,15 +290,13 @@ async def main():
                     f"GROBID extracted papers path does not exist: {grobid_dir}"
                 )
                 for gt_file in ground_truth.keys():
-                    grobid_file = (
-                        grobid_dir / f"paper_{gt_file}.grobid.tei.xml"
-                        if "/" not in gt_file
-                        else grobid_dir
-                        / f"paper_{gt_file.split('/')[-1]}.grobid.tei.xml"
-                    )
-                    if not grobid_file.exists():
-                        continue
-                    xml_files.append(grobid_file)
+                    for candidate in candidate_grobid_paths(
+                        grobid_dir,
+                        gt_file,
+                    ):
+                        if candidate.exists():
+                            xml_files.append(candidate)
+                            break
     else:
         for input_dir in args.input_dir:
             input_dir = pathlib.Path(input_dir)

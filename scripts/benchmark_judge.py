@@ -1,7 +1,7 @@
 import argparse
 import asyncio
 
-from config import Config
+from _bootstrap import load_config_module
 from scidef.benchmark import (
     estimate_token_use,
     load_msr_paraphrases,
@@ -23,6 +23,7 @@ from scidef.model.dataclass import JudgeSystemPrompt
 from scidef.utils import get_custom_colored_logger
 
 logger = get_custom_colored_logger(__name__)
+Config = load_config_module().Config
 
 
 def parse_thresholds(value):

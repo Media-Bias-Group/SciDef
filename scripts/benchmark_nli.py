@@ -1,7 +1,7 @@
 import argparse
 import asyncio
 
-from config import Config
+from _bootstrap import load_config_module
 from scidef.benchmark import (
     load_msr_paraphrases,
     load_quora_duplicates,
@@ -20,6 +20,7 @@ from scidef.model.nli.dataclass import ScoreMode
 from scidef.utils import get_custom_colored_logger
 
 logger = get_custom_colored_logger(__name__)
+Config = load_config_module().Config
 
 
 def parse_thresholds(value):

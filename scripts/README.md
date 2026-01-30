@@ -10,7 +10,7 @@ Scripts:
 - [benchmark_nli.py](#benchmark_nlipy)
 - [dspy_train.py](#dspy_trainpy)
 - [evaluate_extraction.py](#evaluate_extractionpy)
- 
+
 ## pdf_to_grobid.py
 This script processes all PDF files in a given directory using a running GROBID server and extracts structured TEI XML representations of the full text. Each PDF is converted into a corresponding .grobid.tei.xml file.
 
@@ -37,7 +37,7 @@ Example for localhost:
 
 ### Example
 ```bash
-uv run grobid_batch_processor.py \
+uv run python scripts/pdf_to_grobid.py \
   --input_folder ./pdfs \
   --output_folder ./output \
   --config ./config.json
@@ -51,7 +51,11 @@ This script extracts definitions from academic papers that have been preprocesse
 
 - GROBID-processed TEI XML files (*.grobid.tei.xml)
 - Optional: DSPy program file (when using DSPyPaperExtractor)
-- configurated [.env](.env) file with LLM backend information
+- Configured LLM backend (.env or environment variables)
+  - Example for vLLM:
+    - `LLM_PROVIDER=vllm`
+    - `VLLM_BASE_URL=http://localhost:8000/v1`
+    - `VLLM_MODEL_NAME=openai/gpt-oss-20b`
 
 ### Arguments
 - --input-dir
@@ -85,7 +89,7 @@ This script extracts definitions from academic papers that have been preprocesse
 - --base-api-url
   Base URL for the LLM API
   (default: http://localhost:8000/v1).
-- --api-key 
+- --api-key
   API key for the LLM service.
 - --cache-dir (optional)
   Directory for caching LLM responses.
@@ -94,9 +98,9 @@ This script extracts definitions from academic papers that have been preprocesse
 - --log-level
   Logging level: DEBUG, INFO, WARNING, ERROR.
 
-### Example 
+### Example
 ```python
-uv run extract_definitions.py \
+uv run python scripts/extract_definitions.py \
   --input-dir ./grobid_xml_files \
   --output-dir ./results/extraction \
   --llm-model-name meta-llama/Llama-3.1-70B \
@@ -106,7 +110,7 @@ uv run extract_definitions.py \
 
 
 ## benchmark_embedding.py
-This script evaluates sentence embedding models using cosine similarity across multiple semantic similarity and paraphrase detection benchmarks. 
+This script evaluates sentence embedding models using cosine similarity across multiple semantic similarity and paraphrase detection benchmarks.
 
 **Output**:
 - EMBEDDING_BENCHMARK_RESULTS.md overview of results
@@ -153,7 +157,7 @@ Supports all metrics defined in MeasureMethod, including:
 
 ### Example
 ```python
-uv run benchmark_embedding.py \
+uv run python scripts/benchmark_embedding.py \
   --datasets stsb sick \
   --thresholds 0.8 [0.6,0.7,0.8,0.9] \
   --ground-truth-thresholds 0.85 \
@@ -230,7 +234,7 @@ Supports all metrics defined in MeasureMethod, including:
   (default: 12)
 
 ```python
-uv run benchmark_judge.py \
+uv run python scripts/benchmark_judge.py \
   --datasets stsb sick \
   --prompt-combinations "(BINARY,[0.94])" "(TERNARY,[0.8,0.94])" \
   --temperatures 0.3 0.7 \
@@ -300,7 +304,7 @@ Supports all metrics defined in MeasureMethod, including:
 
 ###  Example
 ```python
-uv run benchmark_nli.py \
+uv run python scripts/benchmark_nli.py \
   --models facebook/bart-large-mnli roberta-large-mnli \
   --datasets stsb sick \
   --score-modes HMEAN \
@@ -313,7 +317,7 @@ uv run benchmark_nli.py \
 ## dspy_train.py
 This script evaluates and optimizes a DSPy-based definition extraction pipeline for academic papers.
 
-**Output**: 
+**Output**:
 - DSPy extraction programm saved as JSON artifact
   - artifacts/dspy_paper_extractor_*.json
 - Weights and Biases logs
@@ -395,7 +399,7 @@ This script evaluates and optimizes a DSPy-based definition extraction pipeline 
 ### Example
 
 ```python
-uv run dspy_definition_extraction_optimization.py \
+uv run python scripts/dspy_train.py \
   --ground-truth-path data/definitions/all_concepts.json \
   --extractions-dir extraction_dir/pdfs_grobid \
   --llm-model-name openai/gpt-oss-20b \
@@ -484,7 +488,7 @@ This script evaluates definition extraction quality for academic papers using ei
 
 #### Evaluate a DSPy extractor
 ```python
-uv run evaluate_definitions.py \
+uv run python scripts/evaluate_extraction.py \
   --ground-truth-path data/defExtra.json \
   --extractions-dir extraction_dir/pdfs_grobid \
   --llm-model-name openai/gpt-oss-20b \
@@ -494,8 +498,34 @@ uv run evaluate_definitions.py \
 
 #### Evaluation-only (pre-extracted definitions)
 ```python
-uv run evaluate_definitions.py \
+uv run python scripts/evaluate_extraction.py \
   --ground-truth-path data/defExtra.json \
   --extractions-dir extraction_dir/pdfs_grobid \
   --extracted-definitions-path outputs/definitions.json
+```
+
+## defextra_csv_to_json.py
+Convert a hydrated DefExtra CSV into the SciDef ground-truth JSON format expected by
+`evaluate_extraction.py` and `dspy_train.py`.
+
+### Arguments
+- --csv
+  Path to DefExtra hydrated CSV (with definition + context).
+- --output
+  Output JSON path (SciDef ground-truth format).
+- --max-papers (optional)
+  Limit to the first N unique papers (CSV order).
+- --max-defs-per-paper (optional)
+  Limit to the first N definitions per paper (CSV order).
+- --include-out-of-domain (optional)
+  Include rows marked out-of-domain.
+- --lowercase-terms (optional)
+  Lowercase term keys in the output JSON.
+
+### Example
+```python
+uv run python scripts/defextra_csv_to_json.py \
+  --csv /path/to/defextra_hydrated.csv \
+  --output data/defextra_hydrated.json \
+  --max-papers 5
 ```

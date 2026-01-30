@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "SciDef / DefExtra / DefSim"
+message: "If you use these resources, please cite:"
+authors:
+  - family-names: "Kučera"
+    given-names: "Filip"
+  - family-names: "Mandl"
+    given-names: "Christoph"
+  - family-names: "Echizen"
+    given-names: "Isao"
+  - family-names: "Timofte"
+    given-names: "Radu"
+  - family-names: "Spinde"
+    given-names: "Timo"
+year: 2026
+doi: 10.5281/zenodo.XXXXXXX
+url: https://doi.org/10.5281/zenodo.XXXXXXX
+version: 1.0.0
+license: CC-BY-4.0

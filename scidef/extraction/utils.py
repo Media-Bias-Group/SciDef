@@ -14,6 +14,15 @@ from scidef.utils import get_custom_colored_logger
 logger = get_custom_colored_logger(__name__)
 
 
+def _candidate_grobid_paths(grobid_dir: Path, paper_id: str) -> List[Path]:
+    """Return GROBID TEI candidate paths for a given paper id."""
+    base = paper_id.split("/")[-1]
+    return [
+        grobid_dir / f"paper_{base}.grobid.tei.xml",
+        grobid_dir / f"{base}.grobid.tei.xml",
+    ]
+
+
 # --- splits (TRAIN/DEV/TEST) ---
 def make_splits(
     dataset,
@@ -63,14 +72,12 @@ def load_ground_truth(
             ground_truth.keys(),
             desc=f"Loading GROBID extractions from {grobid_dir}",
         ):
-            grobid_file = (
-                grobid_dir / f"paper_{gt_file}.grobid.tei.xml"
-                if "/" not in gt_file
-                else grobid_dir
-                / f"paper_{gt_file.split('/')[-1]}.grobid.tei.xml"
-            )
-
-            if not grobid_file.exists():
+            grobid_file = None
+            for candidate in _candidate_grobid_paths(grobid_dir, gt_file):
+                if candidate.exists():
+                    grobid_file = candidate
+                    break
+            if grobid_file is None:
                 continue
 
             logger.debug(f"Loading extraction file: {grobid_file}")

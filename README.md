@@ -23,16 +23,21 @@ To facilitate future research in Definition Extraction from Scientific articles 
 
 ### DefExtra: Definition Extraction Dataset
 
-[DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) is an human-annotated dataset for the evaluation of definition extaction.
+[DefExtra](https://huggingface.co/datasets/mediabiasgroup/DefExtra) is a human-annotated dataset for the evaluation of definition extraction.
 
 **Content**:
 
 - 268 definitions from 75 papers
-- 60 media bias realted and 15 non-media bias related papers
+- 60 media bias related and 15 non-media bias related papers
+
+**Important**:
+- The public DefExtra release ships **markers only** (no excerpts). You must
+  hydrate it from your own PDFs, then convert the hydrated CSV to SciDef's
+  JSON ground-truth format. See `docs/defextra_integration.md`.
 
 ### DefSim: Definition Similarity Dataset
 
-[DefSim](https://huggingface.co/datasets/mediabiasgroup/DefSim) is an human-annotated dataset for the evaluation of definition similarity.
+[DefSim](https://huggingface.co/datasets/mediabiasgroup/DefSim) is a human-annotated dataset for the evaluation of definition similarity.
 
 **Content**:
 
@@ -43,12 +48,22 @@ To facilitate future research in Definition Extraction from Scientific articles 
 
 To support user-friendly usage, we provide scripts for running the SciDef pipeline, evaluation methods and other utility functions in the [scripts/](scripts) directory.
 
-SciDef uses [uv](https://github.com/astral-sh/uv) for the package and enviroment management.
+SciDef uses [uv](https://github.com/astral-sh/uv) for package and environment management.
+
+## Documentation (AI-generated)
+
+DISCLAIMER: The documentation in `docs/` was auto-generated with AI assistance.
+Please verify commands and settings in your environment.
+
+- [`docs/cli.md`](docs/cli.md): CLI reference and environment setup
+- [`docs/defextra_integration.md`](docs/defextra_integration.md): DefExtra/DefSim integration
+- [`docs/dspy_custom_extractor.md`](docs/dspy_custom_extractor.md): Custom DSPy extractor + training
+- [`scripts/README.md`](scripts/README.md): script-by-script usage details
 
 ### Example
 
 ```bash
-uv run ./benchmark_evaluation.py --datasets stsb sick --metrics cosine_similarity nli --sample-size 100
+uv run python scripts/benchmark_nli.py --datasets stsb sick --sample-size 100
 ```
 
 ## Note on Contribution

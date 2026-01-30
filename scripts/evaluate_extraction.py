@@ -7,7 +7,7 @@ from pathlib import Path
 import dspy
 
 import wandb
-from config import Config, setup_logging
+from _bootstrap import load_config_module
 from scidef.evaluation.utils import evaluate_and_log
 from scidef.extraction.dataclass import ChunkMode
 from scidef.extraction.extractor import (
@@ -20,6 +20,9 @@ from scidef.extraction.utils import load_ground_truth, make_splits
 from scidef.utils import get_custom_colored_logger
 
 logger = get_custom_colored_logger(__name__)
+_config = load_config_module()
+Config = _config.Config
+setup_logging = _config.setup_logging
 
 
 def get_detailed_stats(rows_list: list, metric_keys: list) -> str:

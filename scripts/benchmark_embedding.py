@@ -1,7 +1,7 @@
 import argparse
 import asyncio
 
-from config import Config
+from _bootstrap import load_config_module
 from scidef.benchmark import (
     load_msr_paraphrases,
     load_quora_duplicates,
@@ -21,6 +21,7 @@ from scidef.benchmark.service import (
 from scidef.utils import get_custom_colored_logger
 
 logger = get_custom_colored_logger(__name__)
+Config = load_config_module().Config
 
 
 def parse_thresholds(value):
@@ -221,7 +222,9 @@ async def main():
         save_embedding_tuning_results(all_results)
         print("\n Reports saved:")
         print("  - EMBEDDING_BENCHMARK_RESULTS.md (latest results)")
-        print("  - results/embedding_benchmark/ (detailed timestamped results)")
+        print(
+            "  - results/embedding_benchmark/ (detailed timestamped results)",
+        )
 
 
 if __name__ == "__main__":

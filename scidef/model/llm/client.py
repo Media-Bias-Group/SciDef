@@ -285,6 +285,8 @@ class LLMClient(CacheModel):
                     f"No content in completion message (finish_reason={finish_reason}) {completion.choices =}",
                 )
 
+            if not isinstance(content, str):
+                content = str(content)
             return content.strip()
         except (EmptyResponseError, LLMClientError):
             # Re-raise our custom exceptions as-is
