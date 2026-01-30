@@ -46,8 +46,6 @@ dev = [
     "nvidia-modelopt>=0.40.0",
     "ruff>=0.12.1",
     "pre-commit>=4.3.0",
-    "marimo>=0.14.10",
-    "label-studio>=1.22.0",
 ]
 
 [tool.ruff]
