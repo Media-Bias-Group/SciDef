@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-soon-b31b1b" alt="arXiv soon"></a>
-  <a href="https://sigir.org/"><img src="https://img.shields.io/badge/SIGIR%20%2F%20ACM-under%20review-0054a6" alt="SIGIR / ACM under review"></a>
+  <a href="https://sigir.org/"><img src="https://img.shields.io/badge/SIGIR%202026-under%20review-0054a6" alt="SIGIR 2026 under review"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra"><img src="https://img.shields.io/badge/HF%20Dataset-DefExtra-ff9d00" alt="HF Dataset DefExtra"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefSim"><img src="https://img.shields.io/badge/HF%20Dataset-DefSim-ff9d00" alt="HF Dataset DefSim"></a>
 </p>
@@ -38,6 +38,7 @@ To facilitate future research in Definition Extraction from Scientific articles 
 - 60 media bias related and 15 non-media bias related papers
 
 **Important**:
+
 - The public DefExtra release ships **markers only** (no excerpts). You must
   hydrate it from your own PDFs, then convert the hydrated CSV to SciDef's
   JSON ground-truth format. See `docs/defextra_integration.md`.
