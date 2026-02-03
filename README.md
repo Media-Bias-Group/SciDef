@@ -1,6 +1,6 @@
 # SciDef: Automated Definition Extraction from Scientific Literature
 
-![SciDef - Workflow](img/scidef_workflow.png)
+![SciDef - Workflow](img/scidef_poster.png)
 
 <p align="center">
   <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-soon-b31b1b" alt="arXiv soon"></a>

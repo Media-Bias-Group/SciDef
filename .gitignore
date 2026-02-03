@@ -217,6 +217,6 @@ __marimo__/
 
 
 ### Misc
-artifacts/
+# artifacts/
 wandb/
 results/

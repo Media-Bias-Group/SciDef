@@ -1,0 +1,55 @@
+{
+  "extract.step.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Extract (term, definition) pairs present in this section.\nReturn a dictionary of definitions, e.g. {\"hate speech\": [\"language that is used to expresses hatred towards a targeted group or is intended to be derogatory, to humiliate, or to insult the members of the group.\", \"context sentences...\"], ...}.\nIf none found, return {}.\nRules:\n- Prefer definitions stated or strongly implied in this section.\n- Do not over-generate: only extract what is clearly defined in the section and what is a clearly a definition, not description, explanation, effect, or other information.\n- Each term must be explicitly defined in the section.\n- Do not hallucinate outside this section.\n- Each definition must be ideally 1 sentence long.\n- Remove the prefixes like \"<term> is defined as\" from the definition text and keep lowercase.\n- If multiple definitions are present, extract each one separately.\n- Unless absolutely certain, prefer returning no definitions to false positives.\n- Unless strongly required, copy the definition word by word from the source text!\n- If term has synonyms defined (not abbreviations!), divide them with '/' in the 'term' field.\n- For context, include 1 sentence before and 1 sentence after the definition sentence, if possible and don't change any words or formatting.",
+      "fields": [
+        {
+          "prefix": "Section:",
+          "description": "Section of a paper to analyze."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Extracted Terms:",
+          "description": "[Term, Definition, Context, Type] tuples extracted from the section. Context sentences where the definition was found (i.e., 1 previous sentence, the definition sentence, and 1 next sentence; if possible)."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "determine.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Determine if the given text contains a definition of a term.\nRules:\n- A definition typically includes a clear explanation of a term's meaning.\n- Look for cue phrases like 'is defined as', 'refers to', or 'means'.\n- If unsure, prefer 'no' to avoid false positives.",
+      "fields": [
+        {
+          "prefix": "Section:",
+          "description": "Section of a paper to analyze."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Is Definition:",
+          "description": "Does this section contain an obvious definition?"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}
