@@ -21,6 +21,7 @@ This repository contains:
 - **DefExtra**, a human-annotated dataset for definition extraction
 - **DefSim**, a human-annotated dataset for definition similarity
 - **Evaluation scripts** covering multiple models, prompting strategies, and similarity metrics
+- **DSPy-optimized prompts** in [artifacts](artifacts/) directory for various open-weight & proprietary models
 
 The goal of SciDef is to provide resources for reproducible research on on definition extraction from scientific articles.
 
