@@ -4,6 +4,14 @@ version = "1.0.0"
 description = "**SciDef** provides resources to support research on **definition extraction and definition similarity** from scientific literature."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
+authors = [
+    {name = "Kučera Filip", email = "f.kucera@media-bias-research.org"},
+    {name = "Mandl Christoph", email = "c.mandl@media-bias-research.org"},
+    {name = "Echizen Isao", email = "iechizen@nii.ac.jp"},
+    {name = "Timofte Radu", email = "radu.timofte@uni-wuerzburg.de"},
+    {name = "Spinde Timo", email = "t.spinde@media-bias-research.org"},
+]
+license = "Apache-2.0"
 dependencies = [
     "accelerate>=1.12.0",
     "argparse>=1.4.0",
