@@ -8,7 +8,7 @@
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra"><img src="https://img.shields.io/badge/HF%20Dataset-DefExtra-ff9d00" alt="HF Dataset DefExtra"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefSim"><img src="https://img.shields.io/badge/HF%20Dataset-DefSim-ff9d00" alt="HF Dataset DefSim"></a>
   <a href="https://media-bias-group.github.io/SciDef-ProjectPage/"><img src="https://img.shields.io/badge/Project%20Page-SciDef-2e7d32" alt="SciDef Project Page"></a>
-  <a href="https://zenodo.org/"><img src="https://img.shields.io/badge/Zenodo-coming%20soon-1682D4?logo=zenodo" alt="Zenodo (coming soon)"></a>
+  <a href="https://doi.org/10.5281/zenodo.18501198"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.18501198-1682D4?logo=zenodo" alt="Zenodo DOI: 10.5281/zenodo.18501198"></a>
 </p>
 
 ## Overview
