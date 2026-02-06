@@ -1,6 +1,11 @@
 cff-version: 1.2.0
-title: "SciDef / DefExtra / DefSim"
-message: "If you use these resources, please cite:"
+title: "SciDef"
+message: >-
+  If you use this software, please cite the SciDef paper (preferred citation below).
+type: software
+license: Apache-2.0
+version: 1.0.0
+
 authors:
   - family-names: "Kučera"
     given-names: "Filip"
@@ -12,8 +17,31 @@ authors:
     given-names: "Radu"
   - family-names: "Spinde"
     given-names: "Timo"
-year: 2026
-doi: 10.5281/zenodo.XXXXXXX
-url: https://doi.org/10.5281/zenodo.XXXXXXX
-version: 1.0.0
-license: CC-BY-4.0
+
+keywords:
+  - definition extraction
+  - information retrieval
+  - large language models
+  - dataset construction
+  - evaluation
+
+preferred-citation:
+  type: article
+  title: "SciDef: Automating Definition Extraction from Academic Literature with Large Language Models"
+  authors:
+    - family-names: "Kučera"
+      given-names: "Filip"
+    - family-names: "Mandl"
+      given-names: "Christoph"
+    - family-names: "Echizen"
+      given-names: "Isao"
+    - family-names: "Timofte"
+      given-names: "Radu"
+    - family-names: "Spinde"
+      given-names: "Timo"
+  year: 2026
+  url: "https://arxiv.org/abs/2602.05413"
+  identifiers:
+    - type: other
+      value: "arXiv:2602.05413"
+      description: "arXiv identifier"

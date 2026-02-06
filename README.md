@@ -3,10 +3,12 @@
 ![SciDef - Workflow](img/scidef_poster.png)
 
 <p align="center">
-  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-soon-b31b1b" alt="arXiv soon"></a>
+  <a href="https://arxiv.org/abs/2602.05413"><img src="https://img.shields.io/badge/arXiv-2602.05413-b31b1b" alt="arXiv:2602.05413"></a>
   <a href="https://sigir.org/"><img src="https://img.shields.io/badge/SIGIR%202026-under%20review-0054a6" alt="SIGIR 2026 under review"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra"><img src="https://img.shields.io/badge/HF%20Dataset-DefExtra-ff9d00" alt="HF Dataset DefExtra"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefSim"><img src="https://img.shields.io/badge/HF%20Dataset-DefSim-ff9d00" alt="HF Dataset DefSim"></a>
+  <a href="https://media-bias-group.github.io/SciDef-ProjectPage/"><img src="https://img.shields.io/badge/Project%20Page-SciDef-2e7d32" alt="SciDef Project Page"></a>
+  <a href="https://zenodo.org/"><img src="https://img.shields.io/badge/Zenodo-coming%20soon-1682D4?logo=zenodo" alt="Zenodo (coming soon)"></a>
 </p>
 
 ## Overview
@@ -85,5 +87,13 @@ We have recreated the repository for clean release and due to squashing of Git h
 If you use this resource, please cite:
 
 ```bibtex
-TODO
+@misc{kucera2026scidefautomatingdefinitionextraction,
+      title={SciDef: Automating Definition Extraction from Academic Literature with Large Language Models},
+      author={Filip Ku\v{c}era and Christoph Mandl and Isao Echizen and Radu Timofte and Timo Spinde},
+      year={2026},
+      eprint={2602.05413},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2602.05413},
+}
 ```
