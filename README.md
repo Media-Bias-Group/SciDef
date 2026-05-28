@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2602.05413"><img src="https://img.shields.io/badge/arXiv-2602.05413-b31b1b" alt="arXiv:2602.05413"></a>
-  <a href="https://sigir.org/"><img src="https://img.shields.io/badge/SIGIR%202026-under%20review-0054a6" alt="SIGIR 2026 under review"></a>
+  <a href="https://cikm2026.diag.uniroma1.it/"><img src="https://img.shields.io/badge/CIKM%202026-under%20review-0054a6" alt="CIKM 2026 under review"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefExtra"><img src="https://img.shields.io/badge/HF%20Dataset-DefExtra-ff9d00" alt="HF Dataset DefExtra"></a>
   <a href="https://huggingface.co/datasets/mediabiasgroup/DefSim"><img src="https://img.shields.io/badge/HF%20Dataset-DefSim-ff9d00" alt="HF Dataset DefSim"></a>
   <a href="https://media-bias-group.github.io/SciDef-ProjectPage/"><img src="https://img.shields.io/badge/Project%20Page-SciDef-2e7d32" alt="SciDef Project Page"></a>
