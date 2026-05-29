@@ -87,9 +87,9 @@ We have recreated the repository for clean release and due to squashing of Git h
 If you use this resource, please cite:
 
 ```bibtex
-@misc{kučera2026scidefautomatingdefinitionextraction,
+@misc{kucera2026scidefautomatingdefinitionextraction,
       title={SciDef: Automating Definition Extraction from Academic Literature with Large Language Models},
-      author={Filip Kučera and Christoph Mandl and Isao Echizen and Radu Timofte and Timo Spinde},
+      author={Filip Ku\v{c}era and Christoph Mandl and Isao Echizen and Radu Timofte and Timo Spinde},
       year={2026},
       eprint={2602.05413},
       archivePrefix={arXiv},
