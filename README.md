@@ -27,6 +27,14 @@ This repository contains:
 
 The goal of SciDef is to provide resources for reproducible research on on definition extraction from scientific articles.
 
+## Resources
+
+| Resource | Public record |
+| --- | --- |
+| DefExtra | [10.5281/zenodo.20302624](https://doi.org/10.5281/zenodo.20302624) |
+| DefSim | [10.5281/zenodo.20302704](https://doi.org/10.5281/zenodo.20302704) |
+| SciDef | [10.5281/zenodo.18501198](https://doi.org/10.5281/zenodo.18501198) |
+
 ## Datasets
 
 To facilitate future research in Definition Extraction from Scientific articles we publish 2 human annotated datasets.
